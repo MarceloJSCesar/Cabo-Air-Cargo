@@ -1,4 +1,4 @@
-import { Link, Flex } from '@chakra-ui/react';
+import { Button, Flex } from '@chakra-ui/react';
 
 function RightContent({navItems}) {
 
@@ -6,15 +6,18 @@ function RightContent({navItems}) {
         <Flex alignItems='center' justifyContent='center' gap={4} mr={20}>
             {navItems?.map((item) => {
                 return (
-                    <Link 
+                    <Button 
                     key={item.name}
                     href={item.href}
-                    color='blue'
+                    color='white'
                     textDecoration='none'
                     border='none'
+                    bg='transparent'
+                    _hover={{background: 'blackAlpha.300'}}
+
                 >
-                    {item.name}
-                </Link>
+                    <strong>{item.name}</strong>
+                </Button>
                 );
             })}
         </Flex>

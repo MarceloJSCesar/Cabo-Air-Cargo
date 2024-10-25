@@ -5,7 +5,7 @@ export default function HowItWorks(){
 
 
     return (
-        <div className="howitworks">
+        <div className="howitworks" id="howitworks">
 
             <div className="main">
                 <div className="hwrapper">
@@ -13,8 +13,8 @@ export default function HowItWorks(){
                     <div className="Headers">
                         
                         <h1 className="title">How It Works</h1>
-                        <p className="subtitle">Recive your<br/>
-                        packages <span style={{color:" #E9E9E9"}}>faster</span> </p>
+                        <p className="subtitle">Receive your<br/>
+                        packages <span>faster</span> </p>
                     </div>
 
                     <div className="content">

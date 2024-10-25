@@ -30,6 +30,15 @@
     margin-bottom: 40px;
     gap: 12px;
 }
+
+.Headers > p {
+    color: white;
+}
+
+.Headers > p > span {
+    color: #EFCE4A;
+    font-weight:bolder;
+}
     
 h1{
     /* TITLE SMALL */

@@ -13,7 +13,7 @@ function Header() {
         },
         {
             name: 'How it works',
-            href: '#',
+            href: '#howitworks',
         },
         {
             name: 'About',

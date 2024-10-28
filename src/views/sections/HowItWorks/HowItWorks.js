@@ -1,4 +1,4 @@
-import VideoPlayer from "../../components/VideoPlayer/VideoPlayer"
+import VideoPlayer from "../../../components/VideoPlayer/VideoPlayer"
 import "./style.css"
 
 export default function HowItWorks(){

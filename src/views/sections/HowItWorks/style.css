@@ -51,6 +51,7 @@ h1{
     line-height: 18px;
     text-align: center;
     letter-spacing: 2px;
+    
     text-transform: uppercase;
     color: #00428C;
     font-family: 'Inter';
@@ -79,6 +80,7 @@ h1{
     color: #030303;
 
     margin:0;
+    max-width: 200px;
     
     
 }
@@ -119,15 +121,19 @@ h1{
     .Headers{
         flex-direction: column;
         text-align: left;
+        align-items: start;
         margin: 0;
     }
     h1{
+
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
+    margin-left: 10px;
     line-height: 24px;
     letter-spacing: 2px;
+
     text-align: left;
 
     color: #00428C;
@@ -135,6 +141,7 @@ h1{
 
     }
     .subtitle{
+        max-width: 280px;
         text-align: left;
         margin: 0 0 0 10px;
     }

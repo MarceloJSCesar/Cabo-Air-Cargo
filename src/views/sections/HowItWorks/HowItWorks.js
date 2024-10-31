@@ -1,13 +1,7 @@
 import { useState, useEffect} from 'react';
 import  axios  from 'axios';
-import  VideoPlayer  from '../../../components/VideoPlayer/VideoPlayer'
-import "./styles.css"
-
-export default function HowItWorks(){
-
-
-import VideoPlayer from "../../../components/VideoPlayer/VideoPlayer"
-import "./style.css"
+import  VideoPlayer  from '../../../components/VideoPlayer/VideoPlayer';
+import "./styles.css";
 
 export default function HowItWorks(){
 
@@ -30,8 +24,6 @@ export default function HowItWorks(){
 
     return (
         <div className="howitworks" id="howitworks">
-
-<<
             <div className="hiw-main">
                 <div className="hiwwrapper">
 

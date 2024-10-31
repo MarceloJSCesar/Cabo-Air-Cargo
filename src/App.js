@@ -1,22 +1,20 @@
 import './App.css';
 import { Provider } from "./components/ui/provider";
 import Header from './views/layout/Header';
-import ContactUs from './components/ContactUs';
+import HowItWorks from './views/sections/HowItWorks/HowItWorks';
+import ContactUs from './components/ContactUs'; // Keep the import from feat-CU-8696a0258
+import AboutUs from './views/sections/AboutUs/AboutUs';
 
-import HowItWorks from './pages/HowItWorks/HowItWorks';
 
 function App() {
   return (
     <Provider>
       <Header />
-     
-      
       <HowItWorks />
-
-      <ContactUs />
+      <AboutUs />
+      <ContactUs /> 
     </Provider>
   );
 }
 
 export default App;
- 

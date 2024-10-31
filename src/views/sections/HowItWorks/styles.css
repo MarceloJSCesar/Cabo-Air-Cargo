@@ -15,7 +15,7 @@
     padding-top: 50px;
     padding-bottom: 50px;
 }
-.main{
+.hiw-main{
     max-width: 1024px;
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@
     gap: 12px;
 }
     
-.Headers{
+.hiw-Headers{
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -31,16 +31,16 @@
     gap: 12px;
 }
 
-.Headers > p {
+.hiw-Headers > p {
     color: white;
 }
 
-.Headers > p > span {
+.hiw-Headers > p > span {
     color: #EFCE4A;
     font-weight:bolder;
 }
     
-h1{
+.hiw-title{
     /* TITLE SMALL */
     
     
@@ -60,12 +60,12 @@ h1{
     
 }
     
-.container{
+.hiw-container{
     width: 100%;
 }
 
 
-.subtitle{
+.hiw-subtitle{
 
     
     font-family: 'Inter';
@@ -84,10 +84,10 @@ h1{
     
     
 }
-.content {
+.hiw-content {
     height: fit;
 }
- .content p{
+ .hiw-content p{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -103,28 +103,28 @@ h1{
     display: block;
 } 
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
 /* Laptop and bigger screens */
-    .main{
+    .hiw-main{
       
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 12px;
     }
-    .main{
+    .hiw-main{
         flex-direction: row;
         justify-content: space-between;
         align-items: left;
         width: 100%;
     }
-    .Headers{
+    .hiw-Headers{
         flex-direction: column;
         text-align: left;
         align-items: start;
         margin: 0;
     }
-    h1{
+    .hiw-title{
 
     font-family: 'Inter';
     font-style: normal;
@@ -140,19 +140,19 @@ h1{
 
 
     }
-    .subtitle{
+    .hiw-subtitle{
         max-width: 280px;
         text-align: left;
         margin: 0 0 0 10px;
     }
-    .container{
+    .hiw-container{
         max-width: 580px;
     }
-    .content{
+    .hiw-content{
         max-width: 352px;
 
     }
-    .content p {
+    .hiw-content p {
         font-family: 'Inter';
         font-style: normal;
         font-weight: 500;
@@ -168,7 +168,7 @@ h1{
         display: block;
 
     }
-    .hwrapper {
+    .hiw-wrapper {
         display: flex;
         flex-direction: column;
         align-items: flex-start;

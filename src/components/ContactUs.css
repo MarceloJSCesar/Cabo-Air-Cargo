@@ -107,7 +107,7 @@ h2 {
 }
 
 /* Media query for responsive design */
-@media (max-width: 795px) {
+@media (max-width: 800px) {
     .contact_container {
         padding: 60px 15px; 
       
@@ -158,17 +158,17 @@ h2 {
     .item {
         display: flex;
         align-items: center; /* Center icon and text vertically */
-        justify-content: center; /* Center items horizontally */
+        justify-content: center; 
         padding: 10px;
-        flex-direction: column; /* Stack icon and text vertically */
+        flex-direction: column; 
     }
 
     .icon {
-        font-size: 50px; /* Increase icon size */
-        padding: 12px; /* Add padding around the icon */
-        background-color: white; /* Set background color to white */
-        border-radius: 50%; /* Make it rounded */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add shadow for depth */
+        font-size: 50px; 
+        padding: 12px;
+        background-color: white; 
+        border-radius: 50%; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
     }
 
     .icon-container {
@@ -181,5 +181,3 @@ h2 {
         background-color: red;
     }
 } 
-
-

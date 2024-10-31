@@ -5,12 +5,6 @@ import "./styles.css"
 
 export default function HowItWorks(){
 
-
-import VideoPlayer from "../../../components/VideoPlayer/VideoPlayer"
-import "./style.css"
-
-export default function HowItWorks(){
-
     const [data, setData] = useState({});
 
     useEffect(() => {
@@ -30,8 +24,6 @@ export default function HowItWorks(){
 
     return (
         <div className="howitworks" id="howitworks">
-
-<<
             <div className="hiw-main">
                 <div className="hiwwrapper">
 

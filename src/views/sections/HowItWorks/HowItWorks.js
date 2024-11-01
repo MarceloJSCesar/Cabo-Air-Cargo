@@ -1,10 +1,9 @@
 import { useState, useEffect} from 'react';
 import  axios  from 'axios';
-import VideoPlayer from "../../../components/VideoPlayer/VideoPlayer"
-import "./style.css"
+import  VideoPlayer  from '../../../components/VideoPlayer/VideoPlayer'
+import "./styles.css"
 
 export default function HowItWorks(){
-
 
     const [data, setData] = useState({});
 
@@ -25,23 +24,24 @@ export default function HowItWorks(){
 
     return (
         <div className="howitworks" id="howitworks">
+            <div className="hiw-main">
+                <div className="hiwwrapper">
 
-            <div className="main">
-                <div className="hwrapper">
-
-                    <div className="Headers">
-                        <h1 className="title">{data.title}</h1>
-                        <p className="subtitle">{data.subtitle}&nbsp;<span>{data.span}</span> </p>
+                    <div className="hiw-Headers">
+                        <h1 className="hiw-title">{data.title}</h1>
+                        <p className="hiw-subtitle">{data.subtitle}&nbsp;<span>{data.span}</span> </p>
                     </div>
 
-                    <div className="content">
+                    <div className="hiw-content">
                         <p>
                         {data.content}
                         </p>
                     </div>
 
                 </div>
-                <div className="container">
+
+                <div className="hiw-container">
+
                 <VideoPlayer
                 title={data.videoTitle}
                 src={data.url}

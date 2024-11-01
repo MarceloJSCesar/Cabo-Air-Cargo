@@ -1,11 +1,16 @@
 import express from "express";
 const router = express.Router();
 
-import handleUpload from "../utils/cloudinaryConfig.js";
-import herobanner from "../models/heroBanner.js";
+import handleUpload from "../utils/cloudinary.config.js";
+import herobanner from "../models/herobanner.model.js";
 import multer from "multer";
 const upload = multer({ dest: "uploads/" });
 
+/**
+ * @route   POST /api/s1/upload
+ * @desc    Upload hero banner image
+ * @return  JSON { imgUrl: String, _id: String }
+ */
 router.post("/upload", upload.single("heroBanner"), async (req, res) => {
   try {
     const file = req.file.path;
@@ -23,6 +28,11 @@ router.post("/upload", upload.single("heroBanner"), async (req, res) => {
   }
 });
 
+/**
+ * @route   GET /api/s1/heroBanner
+ * @desc    Get hero banner image URL from database
+ * @return  JSON { imgUrl: String, _id: String }
+ */
 router.get("/heroBanner", async (req, res) => {
   try {
     const heroBanner = await herobanner.find();

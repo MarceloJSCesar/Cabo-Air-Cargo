@@ -1,11 +1,20 @@
 import express from "express";
 const router = express.Router();
 
-import howItWorks from "../models/howItWorks";
+import howItWorks from "../models/howItWorks.js";
 
-// create howItWorks
-router.post("/", async (req, res) => {
-  const newHowItWorks = new howItWorks(req.body);
+router.post("/howitworks", async (req, res) => {
+  const { title, description, videoUrl } = req.body;
+  if (!title || !description || !videoUrl) {
+    return res.status(400).json("Please fill all fields...");
+  }
+
+  const newHowItWorks = new howItWorks({
+    title,
+    description,
+    videoUrl,
+  });
+
   try {
     const savedHowItWorks = await newHowItWorks.save();
     res.status(200).json(savedHowItWorks);
@@ -14,36 +23,15 @@ router.post("/", async (req, res) => {
   }
 });
 
-// read howItWorks
-router.get("/", async (req, res) => {
+router.get("/howitworks", async (req, res) => {
   try {
     const allHowItWorks = await howItWorks.find();
     res.status(200).json(allHowItWorks);
-  } catch (err) {
-    res.status(500).json(err);
+  } catch (error) {
+    res
+      .status(500)
+      .json({ err: error, message: "Something went wrong! Please try again." });
   }
 });
 
-// update howItWorks
-router.put("/:id", async (req, res) => {
-  try {
-    const updatedHowItWorks = await howItWorks.findByIdAndUpdate(
-      req.params.id,
-      { $set: req.body },
-      { new: true }
-    );
-    res.status(200).json(updatedHowItWorks);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-// delete howItWorks
-router.delete("/:id", async (req, res) => {
-  try {
-    await howItWorks.findByIdAndDelete(req.params.id);
-    res.status(200).json("howItWorks section has been deleted...");
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+export default router;

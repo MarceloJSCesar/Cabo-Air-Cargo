@@ -1,9 +1,5 @@
 import { useState, useEffect} from 'react';
 import  axios  from 'axios';
-
-import  VideoPlayer  from '../../../components/VideoPlayer/VideoPlayer'
-import "./styles.css"
-=======
 import  VideoPlayer  from '../../../components/VideoPlayer/VideoPlayer';
 import "./styles.css";
 

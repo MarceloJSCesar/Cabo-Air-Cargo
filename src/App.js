@@ -4,6 +4,7 @@ import Header from './views/layout/Header';
 import HowItWorks from './views/sections/HowItWorks/HowItWorks';
 import ContactUs from './components/ContactUs'; // Keep the import from feat-CU-8696a0258
 import AboutUs from './views/sections/AboutUs/AboutUs';
+import Footer from './views/sections/Footer/Footer';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <HowItWorks />
       <AboutUs />
       <ContactUs /> {/* Keep the ContactUs component from feat-CU-8696a0258 */}
+      <Footer />
     </Provider>
   );
 }

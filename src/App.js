@@ -12,7 +12,7 @@ function App() {
       <Header />
       <HowItWorks />
       <AboutUs />
-      <ContactUs /> {/* Keep the ContactUs component from feat-CU-8696a0258 */}
+      <ContactUs /> 
     </Provider>
   );
 }

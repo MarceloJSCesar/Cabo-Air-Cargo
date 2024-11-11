@@ -14,6 +14,7 @@ function App() {
       <HowItWorks />
       <AboutUs />
       <ContactUs /> 
+      <Footer />
     </Provider>
   );
 }

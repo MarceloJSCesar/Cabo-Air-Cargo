@@ -1,90 +1,112 @@
 .footer {
-    display: flex;
-    justify-content: space-around;
-    background-color: #f2f2f2;
-    padding: 40px 20px;
-    color: #333;
-    font-family: Arial, sans-serif;
-  }
-  
-  .footer-logo,
-  .footer-links,
-  .footer-socials,
-  .footer-locations,
-  .footer-contact {
-    flex: 1;
-    text-align: center;
-  }
-  
-  .footer-logo h2 {
-    font-size: 1.5em;
-    margin: 10px 0;
-  }
-  
-  .footer-logo p {
-    font-size: 0.9em;
-    color: #666;
-  }
-  
-  .footer-social-logos {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    font-size: 1.5em;
-  }
-  
-  .footer-links h3,
-  .footer-socials h3,
-  .footer-locations h3,
-  .footer-contact h3 {
-    color: #004aad;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  .footer-links ul,
-  .footer-socials ul,
-  .footer-locations ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .footer-links li,
-  .footer-socials li,
-  .footer-locations li {
-    margin: 5px 0;
-    cursor: pointer;
-  }
+  display: flex;
+  justify-content: space-around;
+  background-color: #f2f2f2;
+  padding: 30px 10px;
+  color: #333;
+  font-family: Arial, sans-serif;
+  flex-wrap: wrap;
+  gap: 1rem; 
+}
 
-  .footer-contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .footer-contact h3 {
-    font-weight: bold;
-    margin: 0;
-  }
-  .footer-contact p {
-    margin: 10px;
-    font-size: .9em;
-  }
-  
-  .footer-contact-button {
-    background-color: transparent;
-    border: 2px solid #333;
-    border-radius: 5px;
-    padding: 5px 15px;
-    color: #333;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .footer-contact-button:hover {
-    background-color: #333;
-    color: #fff;
-  }
+.footer-logo,
+.footer-links,
+.footer-socials,
+.footer-locations,
+.footer-contact {
+  flex: 1;
+}
+
+.footer-logo {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.footer-logo-image {
+  width: 90px;
+  height: auto;
+}
+
+.footer-logo h3 {
+  font-weight: bold;
+  margin: 0;
+}
+
+.footer-description {
+  margin-top: 0.5rem;
+  max-width: 400px;
+}
+
+.footer-social-logos {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.5em;
+  margin-top: 0.5rem;
+  color: #004aad;
+}
+
+.footer-links,
+.footer-socials,
+.footer-locations,
+.footer-contact {
+  text-align: center;
+}
+
+.footer-links h3,
+.footer-socials h3,
+.footer-locations h3,
+.footer-contact h3 {
+  color: #004aad;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-links ul,
+.footer-socials ul,
+.footer-locations ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-socials li,
+.footer-locations li {
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-contact p {
+  margin: 10px;
+  font-size: 0.9em;
+}
+
+.footer-contact-button {
+  background-color: transparent;
+  border: 2px solid #333;
+  border-radius: 5px;
+  padding: 5px 25px;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-contact-button:hover {
+  background-color: #333;
+  color: #fff;
+}

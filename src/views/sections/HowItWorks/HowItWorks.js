@@ -3,7 +3,6 @@ import  axios  from 'axios';
 import  VideoPlayer  from '../../../components/VideoPlayer/VideoPlayer'
 import "./styles.css"
 
-
 export default function HowItWorks(){
 
     const [data, setData] = useState({});

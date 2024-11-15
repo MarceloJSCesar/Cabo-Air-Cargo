@@ -3,7 +3,7 @@ import { Button, Flex, Link } from '@chakra-ui/react';
 function RightContent({navItems}) {
 
     return (
-        <Flex alignItems='center' justifyContent='center' gap={4} mr={20}>
+        <Flex hideBelow="md" alignItems='center' justifyContent='center' gap={4} mr={20}>
             {navItems?.map((item) => {
                 return (
                    <Link

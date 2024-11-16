@@ -28,6 +28,7 @@ export default function MenuDrawer({ navItems }) {
           </div>
           {/* Optionally add a close button inside the drawer
           <img src={X} alt="Close" className="MenuDrawerHeaderX" onClick={toggleDrawer} /> */}
+          <hr />
         </div>
 
         <div className="MenuDrawerBody">

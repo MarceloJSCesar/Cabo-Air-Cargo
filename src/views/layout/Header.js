@@ -10,19 +10,19 @@ function Header() {
     const navItems = [
         {
             name: 'Home',
-            href: '#',
+            href: '#home',
         },
         {
             name: 'How it works',
-            href: '#howitworks',
+            href: '#how-it-works',
         },
         {
-            name: 'About',
-            href: '#',
+            name: 'About Us',
+            href: '#about-us',
         },
         {
-            name: 'Contact',
-            href: '#',
+            name: 'Contact Us',
+            href: '#contact-us',
         },
     ];
 
@@ -39,7 +39,7 @@ function Header() {
                 alignContent='center'
                 justifyContent='center'
                 borderRadius='0px 0px 64px 64px'
-
+                id="home-section"
 
             >
                 <HStack 

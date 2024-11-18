@@ -10,6 +10,10 @@ export default function MenuDrawer({ navItems }) {
     setIsOpen(!isOpen);
   };
 
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div>
       {/* Hamburger button positioned on the top right */}
@@ -28,12 +32,13 @@ export default function MenuDrawer({ navItems }) {
           </div>
           {/* Optionally add a close button inside the drawer
           <img src={X} alt="Close" className="MenuDrawerHeaderX" onClick={toggleDrawer} /> */}
+          <hr />
         </div>
 
         <div className="MenuDrawerBody">
         {navItems?.map((item) => {
                 return (
-              <Link to={item.href} key={item.name} className="MenuDrawerBodyLink">
+              <Link href={item.href} key={item.name} onClick={handleClose} className="MenuDrawerBodyLink">
                 <Button className="MenuDrawerBodyButton">
                   <h3 className="MenuDrawerBodyButtonTitle">{item.name}</h3>
                 </Button>

@@ -3,6 +3,7 @@ import './ContactUs.css';
 
 const ContactUs = () => {
     return (
+
         <div className="contact_container">
             <div className="MAIN">
                 <div className="contact-wrapper">
@@ -41,11 +42,13 @@ const ContactUs = () => {
                                 </a>
                             </div>
                         </div>                    
+
                     </div>
                     <div className='map'>
                         <img src="map.png" alt="map" className="mapImg"/>
                     </div>
                 </div>    
+
             </div>
         </div>
     );

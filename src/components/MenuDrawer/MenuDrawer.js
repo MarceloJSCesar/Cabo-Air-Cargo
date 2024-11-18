@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './MenuDrawer.css';
 import { Button, Link } from '@chakra-ui/react';
+import { Home } from 'feather-icons-react';
 
 // import X from '../../assets/default/x.png';
 export default function MenuDrawer({ navItems }) {
@@ -8,6 +9,11 @@ export default function MenuDrawer({ navItems }) {
 
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
+  };
+
+
+  const handleClose = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -28,12 +34,15 @@ export default function MenuDrawer({ navItems }) {
           </div>
           {/* Optionally add a close button inside the drawer
           <img src={X} alt="Close" className="MenuDrawerHeaderX" onClick={toggleDrawer} /> */}
+          <hr />
+
         </div>
 
         <div className="MenuDrawerBody">
         {navItems?.map((item) => {
                 return (
-              <Link to={item.href} key={item.name} className="MenuDrawerBodyLink">
+
+              <Link href={item.href} key={item.name} onClick={handleClose} className="MenuDrawerBodyLink">
                 <Button className="MenuDrawerBodyButton">
                   <h3 className="MenuDrawerBodyButtonTitle">{item.name}</h3>
                 </Button>

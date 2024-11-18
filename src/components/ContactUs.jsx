@@ -3,8 +3,7 @@ import './ContactUs.css';
 
 const ContactUs = () => {
     return (
-        <div className="contact_container">
-            <div className="MAIN">
+        <div className="contact_container" id='contact-us'>
             <div className="contacts">
                 <h1 className='title'> Contact Us</h1>
                 <p className='subtitle'>Where Can You <span className="find">Find <span>Us</span></span></p>
@@ -44,7 +43,6 @@ const ContactUs = () => {
             </div>
             <div className='map'>
                 <img src="map.png" alt="map" className="mapImg"/>
-            </div>
             </div>
         </div>
     );

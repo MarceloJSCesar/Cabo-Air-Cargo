@@ -23,7 +23,7 @@ export default function HowItWorks(){
     }, []);
 
     return (
-        <div className="howitworks" id="howitworks">
+        <div className="howitworks" id="how-it-works">
             <div className="hiw-main">
                 <div className="hiwwrapper">
 

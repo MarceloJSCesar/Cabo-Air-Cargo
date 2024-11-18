@@ -3,25 +3,26 @@ import RightContent from "../../components/navbar/RightContent";
 import LeftContent from "../../components/navbar/LeftContent";
 import img from "../../assets/default/plane.png";
 import HomeSection from "../sections/HomeSection";
+import MenuDrawer from "../../components/MenuDrawer/MenuDrawer";
 
 function Header() {
 
     const navItems = [
         {
             name: 'Home',
-            href: '#',
+            href: '#home',
         },
         {
             name: 'How it works',
-            href: '#howitworks',
+            href: '#how-it-works',
         },
         {
-            name: 'About',
-            href: '#',
+            name: 'About Us',
+            href: '#about-us',
         },
         {
-            name: 'Contact',
-            href: '#',
+            name: 'Contact Us',
+            href: '#contact-us',
         },
     ];
 
@@ -38,6 +39,8 @@ function Header() {
                 alignContent='center'
                 justifyContent='center'
                 borderRadius='0px 0px 64px 64px'
+                id="home-section"
+
             >
                 <HStack 
                 h='10vh'
@@ -47,13 +50,18 @@ function Header() {
                 alignSelf='start' 
                 justifyContent='space-between' 
                 position='absolute'
+                z-index='5000'
                 >
                 
                     <LeftContent />
                     
                     <RightContent navItems={navItems}/>
 
-                    <HStack></HStack>
+                    <HStack>
+                        <button className="menuButton">
+                            <MenuDrawer navItems={navItems} />
+                        </button>
+                    </HStack>
                 </HStack>
 
                 <HomeSection img={img}/>

@@ -6,7 +6,7 @@ export default function AboutUs() {
     
   
     return (
-    <div className="AboutUs-section">
+    <div className="AboutUs-section" id="about-us">
 
                 <div className="AboutUs-main">
                     <h1 className="AboutUs-title" aria-label="About Us">ABOUT US</h1>

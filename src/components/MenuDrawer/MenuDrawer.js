@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './MenuDrawer.css';
 import { Button, Link } from '@chakra-ui/react';
-import { Home } from 'feather-icons-react';
+
 // import X from '../../assets/default/x.png';
 export default function MenuDrawer({ navItems }) {
   const [isOpen, setIsOpen] = useState(false);

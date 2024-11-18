@@ -1,11 +1,12 @@
 import { Box, Image } from '@chakra-ui/react';
-
+import Header from '../layout/Header';
 function HomeSection({img}) {
     return (
         <Box
             w='100%'
-            h='55vh'
-        >
+            h='100vh'
+        >   
+            <Header />
             <Image 
                 src={img}
                 fit='cover'

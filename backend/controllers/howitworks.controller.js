@@ -38,7 +38,7 @@ router.post("/howitworks", async (req, res) => {
  */
 router.get("/howitworks", async (req, res) => {
   try {
-    const allHowItWorks = await howItWorks.find();
+    const allHowItWorks = await howItWorks.findOne();
     res.status(200).json(allHowItWorks);
   } catch (error) {
     res
@@ -48,11 +48,11 @@ router.get("/howitworks", async (req, res) => {
 });
 
 /**
- * @route   UPDATE /api/s2/howitworks/:id
+ * @route   UPDATE /api/s2/howitworks
  * @desc    update how it works content by ID
  * @return  JSON { message: String, updatedHowItWorks: { title: String, description: String, videoUrl: String }}
  */
-router.patch("/howitworks/:id", async (req, res) => {
+router.put("/howitworks", async (req, res) => {
   const { title, description, videoUrl } = req.body;
 
   if (!title || !description || !videoUrl) {
@@ -60,7 +60,7 @@ router.patch("/howitworks/:id", async (req, res) => {
   }
 
   try {
-    const updatedHowItWorks = await howItWorks.findByIdAndUpdate(
+    const updatedHowItWorks = await howItWorks.findOneAndUpdate(
       req.params.id,
       {
         title,

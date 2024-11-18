@@ -116,7 +116,7 @@
   color: #fff;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 760px) {
   .footer {
     display: flex;
     flex-direction: column;

@@ -1,8 +1,6 @@
 import { HStack, Box, VStack } from "@chakra-ui/react";
 import RightContent from "../../components/navbar/RightContent";
 import LeftContent from "../../components/navbar/LeftContent";
-import img from "../../assets/default/plane.png";
-import HomeSection from "../sections/HomeSection";
 import MenuDrawer from "../../components/MenuDrawer/MenuDrawer";
 
 function Header() {
@@ -32,7 +30,7 @@ function Header() {
                 bgSize='cover'
                 bgPos='center'
                 bgRepeat='no-repeat'
-                h={{base: '65vh'}}
+                h={{base: '10vh'}}
                 display='flex'
                 flexDirection='row'
                 alignItems='end'
@@ -63,8 +61,6 @@ function Header() {
                         </button>
                     </HStack>
                 </HStack>
-
-                <HomeSection img={img}/>
 
             </Box>
     );

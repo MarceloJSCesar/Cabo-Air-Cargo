@@ -43,11 +43,13 @@ const ContactUs = () => {
                             </div>
                         </div>                    
 
+
                     </div>
                     <div className='map'>
                         <img src="map.png" alt="map" className="mapImg"/>
                     </div>
                 </div>    
+
 
             </div>
         </div>

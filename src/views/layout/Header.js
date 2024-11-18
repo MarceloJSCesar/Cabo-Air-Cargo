@@ -4,6 +4,7 @@ import LeftContent from "../../components/navbar/LeftContent";
 
 import img from "../../assets/default/plane.png";
 import HomeSection from "../sections/HomeSection";
+import MenuDrawer from "../../components/MenuDrawer/MenuDrawer";
 
 import MenuDrawer from "../../components/MenuDrawer/MenuDrawer";
 

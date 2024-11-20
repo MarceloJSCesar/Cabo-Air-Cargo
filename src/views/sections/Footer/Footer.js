@@ -13,8 +13,8 @@ const Footer = () => {
 				<h3>CABO AIR CARGO</h3>
 				<p className='footer-description'>Let's Make History Together</p>
 				<div className="footer-social-logos">
-					<a href="#" target='_blank'> <FaInstagram /> </a>
-					<a href="#" target='_blank'> <FaLinkedin /> </a>
+					<a href="https://www.instagram.com/barlavento_aviation" target='_blank'> <FaInstagram /> </a>
+					<a href="https://www.linkedin.com/company/barlavento-aviation-consulting-solutions/" target='_blank'> <FaLinkedin /> </a>
 					{/* <FaFacebook /> */}
 				</div>
 	  </div>
@@ -30,8 +30,8 @@ const Footer = () => {
 		<div className="footer-socials">
 			<h3><em>SOCIALS</em></h3>
 			<ul>
-				<li> <a href="#" target='_blank'> LinkedIn </a></li>
-				<li> <a href="#" target='_blank'> Instagram </a></li>
+				<li> <a href="https://www.instagram.com/barlavento_aviation" target='_blank'> LinkedIn </a></li>
+				<li> <a href="https://www.linkedin.com/company/barlavento-aviation-consulting-solutions/" target='_blank'> Instagram </a></li>
 			</ul>
 		</div>
 		<div className="footer-locations">

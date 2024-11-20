@@ -1,5 +1,6 @@
 import React from 'react';
-import { MapPin, Linkedin, Instagram, Mail } from 'lucide-react';
+import { MapPin, Mail } from 'lucide-react';
+import { FaInstagram, FaLinkedin} from 'react-icons/fa';
 import './ContactUs.css';
 
 const ContactUs = () => {
@@ -21,18 +22,18 @@ const ContactUs = () => {
                         
                         <div className="item">
                             <div className="icon-wrapper">
-                                <Linkedin className="icon" size={24} />
+                                <FaLinkedin className="icon" size={24} />
                             </div>
-                            <a href="#" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/company/barlavento-aviation-consulting-solutions/" target="_blank" rel="noopener noreferrer">
                                 LinkedIn
                             </a>
                         </div>
                         
                         <div className="item">
                             <div className="icon-wrapper">
-                                <Instagram className="icon" size={24} />
+                                <FaInstagram className="icon" size={24} />
                             </div>
-                            <a href="#" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.instagram.com/barlavento_aviation" target="_blank" rel="noopener noreferrer">
                                 Carbo Air Cargo
                             </a>
                         </div>

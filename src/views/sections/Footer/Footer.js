@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.css';
-import logo from '../../../assets/default/logo.png';
+import logo from '../../../assets/default/cac-logo-no-bg.png';
 import { FaInstagram, FaLinkedin, FaFacebook, FaPaperPlane } from 'react-icons/fa';
 
 const Footer = () => {
@@ -9,8 +9,8 @@ const Footer = () => {
 		<div className="footer-logo">
 			<div className="footer-logo-container">
 				<img src={logo} alt="Logo" className="footer-logo-image" />
-				<h3>CABO AIR CARGO</h3>
 			</div>
+				<h3>CABO AIR CARGO</h3>
 				<p className='footer-description'>Let's Make History Together</p>
 				<div className="footer-social-logos">
 					<a href="#" target='_blank'> <FaInstagram /> </a>

@@ -30,9 +30,8 @@ const Footer = () => {
 		<div className="footer-socials">
 			<h3><em>SOCIALS</em></h3>
 			<ul>
-				<li>Facebook</li>
-				<li>LinkedIn</li>
-				<li>Instagram</li>
+				<li> <a href="#" target='_blank'> LinkedIn </a></li>
+				<li> <a href="#" target='_blank'> Instagram </a></li>
 			</ul>
 		</div>
 		<div className="footer-locations">

@@ -2,6 +2,7 @@ import { useState, useEffect} from 'react';
 import  axios  from 'axios';
 import  VideoPlayer  from '../../../components/VideoPlayer/VideoPlayer';
 import "./styles.css";
+import ManualVideoPlayer from '../../../components/Manual-VideoPlayer/Manual_VideoPlayer';
 
 export default function HowItWorks(){
 
@@ -42,11 +43,7 @@ export default function HowItWorks(){
 
                 <div className="hiw-container">
 
-                <VideoPlayer
-                title={data.videoTitle}
-                src={data.url}
-                className="videoplayer"
-                />
+                <ManualVideoPlayer />
                 </div>
             </div>
            

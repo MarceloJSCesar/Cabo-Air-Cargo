@@ -11,7 +11,7 @@ const Footer = () => {
 				<img src={logo} alt="Logo" className="footer-logo-image" />
 				<h3>CABO AIR CARGO</h3>
 			</div>
-				<p className='footer-description'>Lorem ipsum dolor sit amet consectetur. Eros et aliquam amet aliquet vivamus convallis elit pellentesque</p>
+				<p className='footer-description'>Let's Make History Together</p>
 				<div className="footer-social-logos">
 					<FaInstagram />
 					<FaLinkedin />
@@ -23,8 +23,8 @@ const Footer = () => {
 		<ul>
 			<li>Home</li>
 			<li>How it works</li>
-			<li>About us</li>
-			<li>Contacts</li>
+			<li>About Us</li>
+			<li>Contact Us</li>
 		</ul>
 		</div>
 		<div className="footer-socials">

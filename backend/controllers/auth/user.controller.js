@@ -108,4 +108,16 @@ router.post("/ResetPassword", (req, res) => {
     });
 });
 
+/**
+ * @route   GET /api/user/logout
+ * @desc    Logout user
+ * @return  JSON { msg: String }
+ */
+router.post("/logout", (req, res) => {
+  res.setHeader("Authorization", "");
+  res.setHeader("X-User-ID", "");
+  res.clearCookie("token");
+  return res.status(200).json({ message: "Successfully logged out" });
+});
+
 export default router;

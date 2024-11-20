@@ -40,8 +40,8 @@ const ContactUs = () => {
                         
                         <div className="item">
                             <a href="mailto:alohasammie@icloud.com" className="mail-button">
-                                Mail Us
-                                <Mail size={20} />
+                                Mail Us 
+                                <Mail size={20} style={{marginLeft: '6px'}}/>
                             </a>
                         </div>
                     </div>

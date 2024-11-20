@@ -138,12 +138,18 @@
     }
 
     .socials {
-        grid-template-columns: 1fr;
-        gap: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-content: start;
+        text-align: start;
+        
     }
 
     .item {
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
     }
 
     .mail-button {

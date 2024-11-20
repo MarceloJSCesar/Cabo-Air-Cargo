@@ -4,6 +4,7 @@ import LeftContent from "../../components/navbar/LeftContent";
 import img from "../../assets/default/plane.png";
 import HomeSection from "../sections/HomeSection";
 import MenuDrawer from "../../components/MenuDrawer/MenuDrawer";
+import './Header.css';
 
 function Header() {
 
@@ -44,19 +45,21 @@ function Header() {
 
             >
                 <HStack 
-                h='10vh'
-                minW='100vw' 
-                p={2} 
-                bg='transparent'
-                alignSelf='start' 
-                justifyContent='space-between' 
-                position='absolute'
-                z-index='5000'
+                    h='10vh'
+                    minW='100vw' 
+                    p={2} 
+                    bg='transparent'
+                    alignSelf='start' 
+                    justifyContent='space-between' 
+                    position='absolute'
+                    z-index='5000'
                 >
                 
                     <LeftContent />
                     
                     <RightContent navItems={navItems}/>
+
+                    <p className="navbar-mobile-title" > Cabo Air Cargo </p>
 
                     <HStack>
                         <button className="menuButton">

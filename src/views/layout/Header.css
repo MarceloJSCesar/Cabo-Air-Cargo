@@ -1,0 +1,22 @@
+@media (max-width: 767px) { 
+    .navbar-mobile-title {
+       font-family: 'Times New Roman', Times, serif;
+       color: white;
+       font-size: 18px;
+       position: absolute;
+       left: 50%;
+       transform: translateX(-50%);
+    } 
+}
+
+@media (min-width: 768px) {
+    .navbar-mobile-title {
+        display: none;
+    }
+}
+
+@media (max-width: 270px) {
+    .navbar-mobile-title {
+        display: none;
+    }
+}

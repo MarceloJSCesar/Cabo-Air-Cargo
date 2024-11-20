@@ -40,13 +40,14 @@ function Header() {
                 justifyContent='center'
                 borderRadius='0px 0px 64px 64px'
                 id="home-section"
+                bg='#82A1C4'
 
             >
                 <HStack 
                 h='10vh'
                 minW='100vw' 
                 p={2} 
-                bg='blackAlpha.500'
+                bg='transparent'
                 alignSelf='start' 
                 justifyContent='space-between' 
                 position='absolute'

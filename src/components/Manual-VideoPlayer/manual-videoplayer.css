@@ -1,0 +1,7 @@
+.manual-video-player {
+    margin: 20px;
+}
+
+.manual-video-player video {
+    border-radius: 12px;
+}

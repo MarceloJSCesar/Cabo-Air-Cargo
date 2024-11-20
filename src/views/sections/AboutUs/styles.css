@@ -1,0 +1,143 @@
+.AboutUs-main-desktop {
+    display: none;
+}
+.AboutUs-section {
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px 40px 20px;
+    width: 100%;
+}
+
+.AboutUs-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.AboutUs-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+    color: #00428C;
+    font-family: 'Inter';
+    margin: 0;
+}
+
+.AboutUs-subtitle {
+    color: #030303;
+    max-width: 300px;
+    text-align: center;
+}
+
+.AboutUs-main p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 28px;
+    /* or 187% */
+    text-align: center;
+    max-width: 300px;
+    letter-spacing: 0.0088em;
+    color: #030303;
+
+}
+
+.AboutUs-span1 {
+    color: #00428C;
+}
+.AboutUs-span2 {
+    color: #BF0713;
+}
+
+@media (min-width: 1024px) {
+    .AboutUs-main * {
+        display: none;
+    }
+    .AboutUs-section {
+        background-color: #82A1C4;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .AboutUs-title {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        margin-left: 10px;
+        line-height: 24px;
+        letter-spacing: 2px;
+        align-self: flex-end;
+        text-align: right;
+    
+        color: #00428C;
+    }
+    .AboutUs-subtitle {
+        max-width: 300px;
+        align-self: flex-end;
+        text-align: right;
+        color: #fff;
+    }
+
+    .AboutUs-main-desktop {
+        width:100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        max-width: 1024px;
+
+    }
+    
+    .AboutUs-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+
+            color: #fff;
+
+    }
+    
+    .AboutUs-content div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: fit-content;
+    
+        gap: 20px;
+    }
+
+    .AboutUs-content div > p {
+        max-width: 352px;
+        text-align: justify;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 28px;
+
+        /* or 127% */
+        text-align: justify;
+        letter-spacing: -0.0088em;
+
+        color: #FFFFFF;
+
+        display: block;
+
+    }
+    
+
+    p {
+        color: #030303;
+    }
+}

@@ -1,10 +1,10 @@
 import expess from "express";
 const router = expess.Router();
 
-import User from "../models/userModel.js";
+import User from "../../models/auth/user.model.js";
 import JWT from "jsonwebtoken";
 import bcrypt from "bcryptjs";
-import { sendEmail } from "../utils/sendEmail.js";
+import { sendEmail } from "../../utils/sendEmail.js";
 import crypto from "crypto";
 
 // ----- CREATE ADMIN USER -----
@@ -18,7 +18,11 @@ export const createUser = async () => {
   });
 };
 
-// ----- SIGNIN USER -----
+/**
+ * @route   POST /api/user/login
+ * @desc    Login user
+ * @return  JSON { accessToken: String, user: { id: String, email: String, token: String }}
+ */
 router.post("/login", (req, res) => {
   const { email, password } = req.body;
   User.findOne({ email })
@@ -46,6 +50,11 @@ router.post("/login", (req, res) => {
     });
 });
 
+/**
+ * @route   POST /api/user/ForgetPassword
+ * @desc    Forget password (send email)
+ * @return  JSON { accessToken: String, user: { id: String, email: String, token: String }}
+ */
 router.post("/ForgetPassword", (req, res) => {
   User.findOne({ email: req.body.email })
     .then((user) => {
@@ -69,6 +78,11 @@ router.post("/ForgetPassword", (req, res) => {
     });
 });
 
+/**
+ * @route   POST /api/user/ResetPassword
+ * @desc    Reset password (update password)
+ * @return  JSON { msg: String }
+ */
 router.post("/ResetPassword", (req, res) => {
   const { password } = req.body;
   const { resetToken } = req.query;

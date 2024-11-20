@@ -39,8 +39,7 @@ const Footer = () => {
 			<h3>LOCATIONS</h3>
 			<ul>
 				<li>Cape Verde</li>
-				<li>Netherlands</li>
-				<li>USA</li>
+				<li>Europe</li>
 			</ul>
 	 	</div>
 		<div className="footer-contact">

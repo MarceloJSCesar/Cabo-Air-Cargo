@@ -13,7 +13,7 @@
 .AboutUs-main {
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: center;
     gap: 12px;
 }
 .AboutUs-title {

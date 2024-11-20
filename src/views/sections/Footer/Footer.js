@@ -13,9 +13,9 @@ const Footer = () => {
 			</div>
 				<p className='footer-description'>Let's Make History Together</p>
 				<div className="footer-social-logos">
-					<FaInstagram />
-					<FaLinkedin />
-					<FaFacebook />
+					<a href="#" target='_blank'> <FaInstagram /> </a>
+					<a href="#" target='_blank'> <FaLinkedin /> </a>
+					{/* <FaFacebook /> */}
 				</div>
 	  </div>
 	  <div className="footer-links">

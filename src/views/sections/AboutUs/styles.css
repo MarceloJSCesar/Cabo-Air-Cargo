@@ -1,6 +1,3 @@
-.AboutUs-main-desktop {
-    display: none;
-}
 .AboutUs-section {
     background-color: #FFF;
     display: flex;
@@ -56,6 +53,10 @@
 }
 .AboutUs-span2 {
     color: #BF0713;
+}
+
+.AboutUs-content {
+    margin-top: 8px;
 }
 
 @media (min-width: 1024px) {

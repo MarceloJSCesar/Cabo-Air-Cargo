@@ -15,7 +15,7 @@ export default function HowItWorks(){
                 setData({
                     title: "How It Works",
                     subtitle: "Receive your packages",
-                    span: "faster",
+                    span: "super fast",
                     content: "Watch this simple step by step video, and see how you can receive all your orders from anywhere quicker than ever!",
                     videoTitle: "Video Title",
                     url: "https://www.youtube.com/embed/tgbNymZ7vqY",

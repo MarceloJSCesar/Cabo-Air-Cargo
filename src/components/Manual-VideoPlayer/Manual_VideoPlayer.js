@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import video from '../../assets/video-how-it-works.mp4';
+import video from '../../assets/how-it-works.mp4';
 import './manual-videoplayer.css';
 
 const ManualVideoPlayer = () => {

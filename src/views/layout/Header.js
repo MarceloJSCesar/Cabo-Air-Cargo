@@ -1,7 +1,7 @@
 import { HStack, Box, VStack } from "@chakra-ui/react";
 import RightContent from "../../components/navbar/RightContent";
 import LeftContent from "../../components/navbar/LeftContent";
-import img from "../../assets/default/plane.png";
+import img from "../../assets/header-img.jpg";
 import HomeSection from "../sections/HomeSection";
 import MenuDrawer from "../../components/MenuDrawer/MenuDrawer";
 import './Header.css';

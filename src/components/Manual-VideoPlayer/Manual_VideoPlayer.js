@@ -1,8 +1,7 @@
 import React, { useRef, useState } from 'react';
-import video from '../../assets/how-it-works.mp4';
 import './manual-videoplayer.css';
 
-const ManualVideoPlayer = () => {
+const ManualVideoPlayer = ({ videoSrc, videoType = "video/mp4", className = "" }) => {
   const videoRef = useRef(null);
   const [hasPlayed, setHasPlayed] = useState(false);
 
@@ -17,7 +16,7 @@ const ManualVideoPlayer = () => {
   };
 
   return (
-    <div className="manual-video-player relative w-full max-w-3xl mx-auto my-8">
+    <div className={`manual-video-player relative w-full max-w-3xl mx-auto ${className}`}>
       <video
         ref={videoRef}
         className="w-full rounded-lg shadow-lg"
@@ -25,8 +24,8 @@ const ManualVideoPlayer = () => {
         onEnded={handleVideoEnd}
         controls
       >
-        <source src={video} type="video/mp4" />
-        Your browser does not support the video tag.
+        <source src={videoSrc} type={videoType} />
+          Your browser does not support the video tag.
       </video>
     </div>
   );

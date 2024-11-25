@@ -1,9 +1,5 @@
-
-
-    /* Tablet and smaller screens */
-
-
-.howitworks{
+/* Tablet and smaller screens */
+.howitworks {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,35 +11,32 @@
     padding-top: 50px;
     padding-bottom: 50px;
 }
-.hiw-main{
+
+.hiw-main {
     max-width: 1024px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 12px;
+    width: 100%;
 }
-    
-.hiw-Headers{
+
+.hiw-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
+    gap: 12px;
+}
+
+.hiw-Headers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 40px;
     gap: 12px;
 }
 
-.hiw-Headers > p {
-    color: white;
-}
-
-.hiw-Headers > p > span {
-    color: #EFCE4A;
-    font-weight:bolder;
-}
-    
-.hiw-title{
-    /* TITLE SMALL */
-    
-    
+.hiw-title {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -51,23 +44,12 @@
     line-height: 18px;
     text-align: center;
     letter-spacing: 2px;
-    
     text-transform: uppercase;
     color: #00428C;
-    font-family: 'Inter';
     margin: 0;
-    
-    
-}
-    
-.hiw-container{
-    width: 100%;
 }
 
-
-.hiw-subtitle{
-
-    
+.hiw-subtitle {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 800;
@@ -76,111 +58,81 @@
     text-align: center;
     letter-spacing: -0.0088em;
     text-transform: capitalize;
-    
-    color: #030303;
+    color: #FFFFFF;
+    margin: 0;
+    max-width: 280px;
+}
 
-    margin:0;
-    max-width: 200px;
-    
-    
+.hiw-subtitle span {
+    color: #EFCE4A;
+    font-weight: bolder;
 }
+
+.hiw-container {
+    width: 100%;
+}
+
 .hiw-content {
-    height: fit;
+    height: fit-content;
 }
- .hiw-content p{
+
+.hiw-content p {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 14px;
-    margin: 0 0 0 10px;
-    /* or 127% */
+    line-height: 20px;
+    margin: 0 0 20px 10px;
     text-align: center;
     letter-spacing: -0.0088em;
-
     color: #FFFFFF;
-
-    display: block;
-} 
+}
 
 @media (min-width: 1024px) {
-/* Laptop and bigger screens */
-    .hiw-main{
-      
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 12px;
-    }
-    .hiw-main{
+    .hiw-main {
         flex-direction: row;
         justify-content: space-between;
-        align-items: left;
-        width: 100%;
+        align-items: flex-start;
+        gap: 40px;
     }
-    .hiw-Headers{
-        flex-direction: column;
+
+    .hiw-wrapper {
+        flex: 1;
+        max-width: 450px;
+        align-items: flex-start;
+    }
+
+    .hiw-Headers {
         text-align: left;
-        align-items: start;
+        align-items: flex-start;
         margin: 0;
     }
-    .hiw-title{
 
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    margin-left: 10px;
-    line-height: 24px;
-    letter-spacing: 2px;
-
-    text-align: left;
-
-    color: #00428C;
-
-
+    .hiw-title {
+        font-size: 20px;
+        line-height: 24px;
+        text-align: left;
+        margin-left: 10px;
     }
-    .hiw-subtitle{
-        max-width: 280px;
+
+    .hiw-subtitle {
         text-align: left;
         margin: 0 0 0 10px;
     }
-    .hiw-container{
+
+    .hiw-container {
+        flex: 1;
         max-width: 580px;
     }
-    .hiw-content{
-        max-width: 352px;
 
+    .hiw-content {
+        max-width: 352px;
     }
+
     .hiw-content p {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 500;
         font-size: 22px;
         line-height: 28px;
         margin: 30px 0 30px 10px;
-        /* or 127% */
-        text-align: justify;
-        letter-spacing: -0.0088em;
-
-        color: #FFFFFF;
-
-        display: block;
-
+        text-align: left;
     }
-    .hiw-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        width: 100%; 
-        height: 100%; 
-    }
-
 }
-    
-    
-    
-
-
-

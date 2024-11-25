@@ -1,89 +1,162 @@
-.AboutUs-section {
-    background-color: #82A1C4;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
-}
-
-.AboutUs-main-desktop {
-    width: 100%;
+/* Tablet and smaller screens */
+.aboutus-section {
     display: flex;
     flex-direction: column;
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 0 20px;
-    align-items: center; /* Center children by default for mobile */
+    align-items: center;
+    gap: 12px;
+    background-color: #82A1C4;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
-.AboutUs-title {
+.aboutus-main {
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.aboutus-headers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 12px;
+}
+
+.aboutus-headers > p {
+    color: white;
+}
+
+.aboutus-headers > p > span {
+    color: #EFCE4A;
+    font-weight: bolder;
+}
+
+.aboutus-title {
+    /* TITLE SMALL */
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
-    line-height: 24px;
+    line-height: 18px;
+    text-align: center;
     letter-spacing: 2px;
-    color: #00428C;
-    margin-bottom: 24px;
     text-transform: uppercase;
-    text-align: center; /* Center text for mobile */
+    color: #00428C;
+    font-family: 'Inter';
+    margin: 0;
 }
 
-.AboutUs-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.aboutus-container {
     width: 100%;
-    max-width: 800px;
 }
 
-.AboutUs-content div {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.aboutus-subtitle {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -0.0088em;
+    text-transform: capitalize;
+    color: #030303;
+    margin: 0;
+    max-width: 200px;
 }
 
-.AboutUs-content div > p {
+.aboutus-content {
+    height: fit;
+}
+
+.aboutus-content p {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 14px;
+    line-height: 14px;
+    margin: 0 0 0 10px;
+    /* or 127% */
+    text-align: center;
     letter-spacing: -0.0088em;
     color: #FFFFFF;
-    margin: 0;
-    text-align: center; /* Center text for mobile */
-    max-width: 100%;
+    display: block;
 }
 
 @media (min-width: 1024px) {
-    .AboutUs-main * {
-        display: none;
-    }
-
-    .AboutUs-main-desktop {
-        padding: 0 15px;
-        align-items: flex-start; /* Align items to start for desktop */
-    }
-    
-    .AboutUs-title {
-        align-self: flex-start;
-        text-align: left; /* Left align for desktop */
-    }
-    
-    .AboutUs-content {
-        margin-left: 0;
-    }
-
-    .AboutUs-content div > p {
-        text-align: left; /* Left align for desktop */
-    }
-}
-
-@media (max-width: 1023px) {
-    .AboutUs-main-desktop {
+    /* Laptop and bigger screens */
+    .aboutus-main {
         display: flex;
-        justify-content: center;
-        text-align: center;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .aboutus-main {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: left;
+        width: 100%;
+    }
+
+    .aboutus-headers {
+        flex-direction: column;
+        text-align: left;
+        align-items: start;
+        margin: 0;
+    }
+
+    .aboutus-title {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        margin-left: 10px;
+        line-height: 24px;
+        letter-spacing: 2px;
+        text-align: left;
+        color: #00428C;
+    }
+
+    .aboutus-subtitle {
+        max-width: 280px;
+        text-align: left;
+        margin: 0 0 0 10px;
+    }
+
+    .aboutus-container {
+        max-width: 580px;
+    }
+
+    .aboutus-content {
+        max-width: 352px;
+    }
+
+    .aboutus-content p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 28px;
+        margin: 30px 0 30px 10px;
+        /* or 127% */
+        text-align: justify;
+        letter-spacing: -0.0088em;
+        color: #FFFFFF;
+        display: block;
+    }
+
+    .aboutus-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
     }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import './styles.css';
 import logo from '../../../assets/default/cac-logo-no-bg.png';
 import { FaInstagram, FaLinkedin, FaFacebook, FaPaperPlane } from 'react-icons/fa';
+import { Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -44,7 +45,10 @@ const Footer = () => {
 		<div className="footer-contact">
 			<h3>GET IN TOUCH</h3>
 			<p>Question or feedback?</p>
-			<button className="footer-contact-button">Mail us <FaPaperPlane /></button>
+			<a href="mailto:info@caboaircargo.com" className="mail-button">
+                                Mail Us 
+                                <Mail size={20} style={{marginLeft: '6px'}}/>
+                            </a>
 		</div>
 	</footer>
   );

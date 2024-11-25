@@ -39,7 +39,7 @@ const ContactUs = () => {
                         </div>
                         
                         <div className="item">
-                            <a href="mailto:alohasammie@icloud.com" className="mail-button">
+                            <a href="mailto:info@caboaircargo.com" className="mail-button">
                                 Mail Us 
                                 <Mail size={20} style={{marginLeft: '6px'}}/>
                             </a>

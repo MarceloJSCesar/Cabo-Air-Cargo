@@ -1,4 +1,3 @@
-/* Tablet and smaller screens */
 .aboutus-section {
     display: flex;
     flex-direction: column;
@@ -17,7 +16,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 24px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.aboutus-wrapper {
+    max-width: 100%;
+    width: 100%;
 }
 
 .aboutus-headers {
@@ -28,17 +34,7 @@
     gap: 12px;
 }
 
-.aboutus-headers > p {
-    color: white;
-}
-
-.aboutus-headers > p > span {
-    color: #EFCE4A;
-    font-weight: bolder;
-}
-
 .aboutus-title {
-    /* TITLE SMALL */
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -48,30 +44,17 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #00428C;
-    font-family: 'Inter';
     margin: 0;
 }
 
 .aboutus-container {
     width: 100%;
-}
-
-.aboutus-subtitle {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 24px;
-    line-height: 24px;
-    text-align: center;
-    letter-spacing: -0.0088em;
-    text-transform: capitalize;
-    color: #030303;
-    margin: 0;
-    max-width: 200px;
+    max-width: 100%;
 }
 
 .aboutus-content {
-    height: fit;
+    width: 100%;
+    max-width: 100%;
 }
 
 .aboutus-content p {
@@ -79,84 +62,50 @@
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 14px;
-    margin: 0 0 0 10px;
-    /* or 127% */
+    line-height: 20px;
+    margin: 20px 0;
     text-align: center;
     letter-spacing: -0.0088em;
     color: #FFFFFF;
-    display: block;
+    width: 100%;
 }
 
 @media (min-width: 1024px) {
-    /* Laptop and bigger screens */
-    .aboutus-main {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 12px;
-    }
-
     .aboutus-main {
         flex-direction: row;
         justify-content: space-between;
-        align-items: left;
-        width: 100%;
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    .aboutus-wrapper {
+        flex: 0 0 42%;
+        max-width: 42%;
     }
 
     .aboutus-headers {
-        flex-direction: column;
         text-align: left;
-        align-items: start;
+        align-items: flex-start;
         margin: 0;
     }
 
     .aboutus-title {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 700;
         font-size: 20px;
-        margin-left: 10px;
         line-height: 24px;
-        letter-spacing: 2px;
         text-align: left;
-        color: #00428C;
-    }
-
-    .aboutus-subtitle {
-        max-width: 280px;
-        text-align: left;
-        margin: 0 0 0 10px;
+        margin-left: 10px;
     }
 
     .aboutus-container {
-        max-width: 580px;
-    }
-
-    .aboutus-content {
-        max-width: 352px;
+        flex: 0 0 52%;
+        max-width: 52%;
+        margin-top: 5%;
     }
 
     .aboutus-content p {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 500;
         font-size: 22px;
         line-height: 28px;
         margin: 30px 0 30px 10px;
-        /* or 127% */
-        text-align: justify;
-        letter-spacing: -0.0088em;
-        color: #FFFFFF;
-        display: block;
-    }
-
-    .aboutus-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        width: 100%;
-        height: 100%;
+        text-align: left;
     }
 }

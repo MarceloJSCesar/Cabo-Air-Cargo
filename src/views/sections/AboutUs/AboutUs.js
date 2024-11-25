@@ -20,7 +20,8 @@ export default function AboutUs() {
                         </p>
 
                         <p>
-                            Additionally, our ultra competitive pricing will give every Cape Verdean access to e-Commerce products from United States, Europe, Africa, and South America and receive in Cape Verde in just 10 days or less. 
+                            Additionally, our ultra competitive pricing will give every Cape Verdean access to e-Commerce products from United States, Europe, Africa, and South America. 
+                            Your items will arrive in Cape Verde on our weekly scheduled flights and will be ready for pick up in  just 10 days or less.
                         </p>
 
                     </div>

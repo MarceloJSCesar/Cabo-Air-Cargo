@@ -2,6 +2,7 @@
     .navbar-mobile-title {
        font-family: 'Times New Roman', Times, serif;
        color: white;
+       font-weight: bold;
        font-size: 18px;
        position: absolute;
        left: 50%;

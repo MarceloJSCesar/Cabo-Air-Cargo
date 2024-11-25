@@ -8,8 +8,11 @@ export default function HowItWorks() {
                 <div className="hiw-wrapper">
                     <div className="hiw-Headers">
                         <h1 className="hiw-title">HOW IT WORKS</h1>
+                        <p className="hiw-subtitle">
+                            Receive Your Packages <span>Super Fast</span>
+                        </p>
                     </div>
-                    
+
                     <div className="hiw-content">
                         <p>
                             Watch this simple step by step video, and see how you can receive all your orders from anywhere quicker than ever!
@@ -32,7 +35,7 @@ export default function HowItWorks() {
                                 <circle cx="12" cy="12" r="10" />
                                 <polygon points="10 8 16 12 10 16 10 8" />
                             </svg>
-                            <h3 className="coming-soon-text">Video Coming Soon</h3>
+                            <p className="coming-soon-text">Video Coming Soon</p>
                             <p className="coming-soon-subtext">We're creating an amazing step-by-step guide for you</p>
                         </div>
                     </div>

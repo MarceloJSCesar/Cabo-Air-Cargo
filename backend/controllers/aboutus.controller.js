@@ -48,11 +48,11 @@ router.get("/aboutus", async (req, res) => {
 });
 
 /**
- * @route   UPDATE /api/s3/aboutus/:id
- * @desc    Update about us content by ID
+ * @route   PUT /api/s3/aboutus/
+ * @desc    Update about us content
  * @return  JSON { message: String, updatedAboutUs: { title: String, rightTxt: String, leftTxt: String }}
  */
-router.patch("/aboutus/:id", async (req, res) => {
+router.put("/aboutus", async (req, res) => {
   const { title, rightTxt, leftTxt } = req.body;
 
   if (!title || !rightTxt || !leftTxt) {
@@ -60,7 +60,7 @@ router.patch("/aboutus/:id", async (req, res) => {
   }
 
   try {
-    const updatedAboutUs = await AboutUs.findByIdAndUpdate(
+    const updatedAboutUs = await AboutUs.findOneAndUpdate(
       req.params.id,
       { title, rightTxt, leftTxt },
       { new: true }

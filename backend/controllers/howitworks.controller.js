@@ -48,8 +48,8 @@ router.get("/howitworks", async (req, res) => {
 });
 
 /**
- * @route   UPDATE /api/s2/howitworks
- * @desc    update how it works content by ID
+ * @route   PUT /api/s2/howitworks
+ * @desc    update how it works content
  * @return  JSON { message: String, updatedHowItWorks: { title: String, description: String, videoUrl: String }}
  */
 router.put("/howitworks", async (req, res) => {

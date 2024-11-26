@@ -20,7 +20,7 @@ export const sendEmail = (email, subject, text) => {
     <a href=${text}>Reset Password</a>
     <p>This link will expire in an hour. If you do not reset your password within this time, you will need to make a new request.</p>
     <p>Thank you,</p>
-    <p>Prendi Team</p>`,
+    <p>Cabo Air Cargo</p>`,
   };
 
   transporter.sendMail(mailOptions, function (err, data) {

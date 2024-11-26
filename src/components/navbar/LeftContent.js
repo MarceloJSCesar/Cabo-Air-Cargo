@@ -1,5 +1,5 @@
 import { Flex, Image } from "@chakra-ui/react";
-import logo from '../../assets/default/logo.png';
+import logo from '../../assets/default/cac-logo-no-bg.png';
 
 function LeftContent() {
     return (
@@ -10,8 +10,8 @@ function LeftContent() {
        >
             <Image 
                 src={logo} 
-                width='100px' 
-                height='100px'
+                width='80px' 
+                height='60px'
                 fit='fill'
             />
        </Flex>

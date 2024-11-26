@@ -1,0 +1,155 @@
+/* Hamburger button styling */
+.hamburger {
+    position: absolute;
+    top: 0.2rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    margin-top: 16px;
+  }
+  
+  .hamburger .bar {
+    position: absolute;
+    width: 2rem;
+    height: 0.20rem;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    
+  }
+  
+  /* Default state for the three bars */
+  .hamburger .bar:nth-child(1) {
+
+    transform: translateY(-0.5rem); /* Position top bar up */
+  }
+  
+  .hamburger .bar:nth-child(2) {
+    transform: translateY(0); /* Position middle bar centered */
+  }
+  
+  .hamburger .bar:nth-child(3) {
+    transform: translateY(0.5rem); /* Position bottom bar down */
+  }
+  
+  /* Transform the hamburger bars to create a centered X when open */
+  .hamburger.open .bar:nth-child(1) {
+    background-color: #004080;
+    transform: rotate(45deg); /* Top bar rotates to form X */
+  }
+  
+  .hamburger.open .bar:nth-child(2) {
+    opacity: 0; /* Middle bar hides */
+  }
+  
+  .hamburger.open .bar:nth-child(3) {
+    background-color: #004080;
+    transform: rotate(-45deg); /* Bottom bar rotates to form X */
+  }
+  
+  /* Menu drawer styling */
+  .MenuDrawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75vw;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem 1rem;
+    font-family: Arial, sans-serif;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Active class to slide drawer into view */
+  .MenuDrawer.active {
+    transform: translateX(0);
+  }
+  
+  .MenuDrawerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    height: 10vh;
+
+  }
+  
+  .MenuDrawerLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .MenuDrawerHeaderTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #004080;
+    margin: 0;
+  }
+  
+  .MenuDrawerHeaderSubtitle {
+    font-size: 1rem;
+    color: #808080;
+    margin-top: -5px;
+  }
+  
+  .MenuDrawerBody {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+  
+  .MenuDrawerBodyLink {
+    text-decoration: none;
+    color: inherit;
+    margin: 0.5rem 0;
+  }
+  
+  .MenuDrawerBodyButton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  .MenuDrawerBodyButton:hover {
+    background-color: #f0f0f0;
+  }
+  
+  
+  .MenuDrawerBodyButtonTitle {
+    font-size: 1rem;
+    color: #004080;
+    margin: 0;
+  }
+  
+  .MenuDrawerFooter {
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #808080;
+  }
+  @media (min-width: 768px) {
+    .hamburger {
+      display: none;
+    }
+  }

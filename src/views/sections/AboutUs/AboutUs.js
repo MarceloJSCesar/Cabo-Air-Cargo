@@ -14,11 +14,15 @@ export default function AboutUs() {
 
                     <div className="aboutus-content">
                         <p>
-                            Cape Verde Businesses will now be able to keep high quality products in inventory by utilizing our super fast air cargo services.
+                            {/* Cape Verde Businesses will now be able to keep high quality products in inventory by utilizing our super fast air cargo services. */}
+                            As empresas de Cabo Verde poderão agora manter produtos de alta qualidade em stock, utilizando os nossos serviços de carga aérea super rápidos.
                         </p>
                         <p>
-                            Additionally, our ultra competitive pricing will give every Cape Verdean access to e-Commerce products from United States, Europe, Africa, and South America. 
-                            Your items will arrive in Cape Verde on our weekly scheduled flights and will be ready for pick up in just 10 days or less.
+                            {/* Additionally, our ultra competitive pricing will give every Cape Verdean access to e-Commerce products from United States, Europe, Africa, and South America. 
+                            Your items will arrive in Cape Verde on our weekly scheduled flights and will be ready for pick up in just 10 days or less. */}
+
+                            Além disso, os nossos preços ultra competitivos darão a todos os cabo-verdianos acesso a produtos de comércio eletrónico dos Estados Unidos, Europa, África e América do Sul. 
+                            Os seus artigos chegarão a Cabo Verde nos nossos voos semanais regulares e estarão prontos para serem recolhidos em apenas 10 dias ou menos.
                         </p>
                     </div>
                 </div>

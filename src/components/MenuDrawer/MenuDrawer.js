@@ -48,7 +48,8 @@ export default function MenuDrawer({ navItems }) {
         </div>
 
         <div className="MenuDrawerFooter">
-          Copyright All Reserved 2024 © CABO AIR CARGO
+         {/*Copyright All Reserved 2024 © CABO AIR CARGO*/}
+          Direitos de autor todos reservados 2024 © CABO AIR CARGO
         </div>
       </div>
     </div>

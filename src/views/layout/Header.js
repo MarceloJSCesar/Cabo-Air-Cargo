@@ -13,15 +13,15 @@ function Header() {
             href: '#home',
         },
         {
-            name: 'How it works',
+            name: 'Como Funciona',
             href: '#how-it-works',
         },
         {
-            name: 'About Us',
+            name: 'Sobre Nós',
             href: '#about-us',
         },
         {
-            name: 'Contact Us',
+            name: 'Contatos',
             href: '#contact-us',
         },
     ];

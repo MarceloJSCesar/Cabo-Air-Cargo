@@ -7,7 +7,7 @@ export default function HowItWorks() {
             <div className="hiw-main">
                 <div className="hiw-wrapper">
                     <div className="hiw-Headers">
-                        <h1 className="hiw-title">HOW IT WORKS</h1>
+                        <h1 className="hiw-title">Como Funciona</h1>
                         <p className="hiw-subtitle">
                             Receive Your Packages <span>Super Fast</span>
                         </p>

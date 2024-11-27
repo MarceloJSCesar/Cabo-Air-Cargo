@@ -9,7 +9,7 @@ export default function AboutUs() {
             <div className="aboutus-main">
                 <div className="aboutus-wrapper">
                     <div className="aboutus-headers">
-                        <h1 className="aboutus-title">About Us</h1>
+                        <h1 className="aboutus-title">Sobre Nós</h1>
                     </div>
 
                     <div className="aboutus-content">

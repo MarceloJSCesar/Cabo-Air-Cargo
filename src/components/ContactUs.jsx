@@ -8,7 +8,7 @@ const ContactUs = () => {
         <div className="contact_container">
             <div className="MAIN">
                 <div className="contacts">
-                    <h1 className="title">Contact Us</h1>
+                    <h1 className="title">Contatos</h1>
                     <p className="subtitle">
                         Where Can You <span className="find">Find <span>Us</span></span>
                     </p>

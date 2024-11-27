@@ -5,12 +5,13 @@ import './ContactUs.css';
 
 const ContactUs = () => {
     return (
-        <div className="contact_container">
+        <div className="contact_container" id='contact-us'>
             <div className="MAIN">
                 <div className="contacts">
-                    <h1 className="title">Contact Us</h1>
+                    <h1 className="title">Contatos</h1>
                     <p className="subtitle">
-                        Where Can You <span className="find">Find <span>Us</span></span>
+                       {/* Where Can You <span className="find">Find <span>Us</span></span> */}
+                       Onde nos pode <span className="find"> <span>encontrar</span></span>
                     </p>
                     <div className="socials">
                         <div className="item">
@@ -40,8 +41,9 @@ const ContactUs = () => {
                         
                         <div className="item">
                             <a href="mailto:info@caboaircargo.com" className="mail-button">
-                                Mail Us 
-                                <Mail size={20} style={{marginLeft: '6px'}}/>
+                               {/* Mail Us */}
+                               Envie e-mail
+                                <Mail size={20} style={{marginLeft: '4px'}}/>
                             </a>
                         </div>
                     </div>

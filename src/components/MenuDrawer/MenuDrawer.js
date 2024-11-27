@@ -10,6 +10,10 @@ export default function MenuDrawer({ navItems }) {
     setIsOpen(!isOpen);
   };
 
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div>
       {/* Hamburger button positioned on the top right */}
@@ -24,16 +28,17 @@ export default function MenuDrawer({ navItems }) {
         <div className="MenuDrawerHeader">
           <div className="MenuDrawerLeft">
             <h1 className="MenuDrawerHeaderTitle">CABO AIR CARGO</h1>
-            <p className="MenuDrawerHeaderSubtitle">menu</p>
+            {/* <p className="MenuDrawerHeaderSubtitle">menu</p> */}
           </div>
           {/* Optionally add a close button inside the drawer
           <img src={X} alt="Close" className="MenuDrawerHeaderX" onClick={toggleDrawer} /> */}
+          <hr />
         </div>
 
         <div className="MenuDrawerBody">
         {navItems?.map((item) => {
                 return (
-              <Link to={item.href} key={item.name} className="MenuDrawerBodyLink">
+              <Link href={item.href} key={item.name} onClick={handleClose} className="MenuDrawerBodyLink">
                 <Button className="MenuDrawerBodyButton">
                   <h3 className="MenuDrawerBodyButtonTitle">{item.name}</h3>
                 </Button>
@@ -43,7 +48,7 @@ export default function MenuDrawer({ navItems }) {
         </div>
 
         <div className="MenuDrawerFooter">
-          2024©CABO AIR CARGO
+          Copyright All Reserved 2024 © CABO AIR CARGO
         </div>
       </div>
     </div>

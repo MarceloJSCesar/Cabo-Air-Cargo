@@ -1,58 +1,34 @@
-import React from 'react'
-import './styles.css'
+import React from 'react';
+import './styles.css';
+import ManualVideoPlayer from '../../../components/Manual-VideoPlayer/Manual_VideoPlayer';
+import aboutVideo from '../../../assets/how-it-works.mp4'; // Make sure to add your video file
 
 export default function AboutUs() {
-
-    
-  
     return (
-    <div className="AboutUs-section">
-
-                <div className="AboutUs-main">
-                    <h1 className="AboutUs-title" aria-label="About Us">ABOUT US</h1>
-                    <h2 className="AboutUs-subtitle" aria-label="Our vision, values and Goals">
-                        Our <span className="AboutUs-span1">vision</span>, <span className="AboutUs-span2">values</span> and <span className="AboutUs-span1">Goals</span></h2>
-                    <p>Lorem ipsum dolor sit amet consectetur. Eros et aliquam amet aliquet vivamus convallis elit pellentesque aliquet. Gravid.</p>
-                </div>
-
-            <div className="AboutUs-main-desktop">
-                <h1 className="AboutUs-title">
-                    ABOUT US
-                </h1>
-                <div className="AboutUs-content">
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur. Eros et ali.
-                        </p>
-
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur. Eros et aliquam amet aliquet vivamus convallis elit pellentesque aliquet. Gravida egestas porttitor sem tincidunt venenatis. Congue eget vulputate.
-                        </p>
-
-                    </div>
-                    
-                    <div>
-                        <h2 className="AboutUs-subtitle" aria-label="Our vision, values and Goals">
-                        Our <span className="AboutUs-span1">vision</span>, <span className="AboutUs-span2">values</span> and <span className="AboutUs-span1">Goals</span>
-                        </h2>   
-                        <p>Lorem ipsum dolor sit amet consectetur. Eros et aliquam amet aliquet vivamus convallis elit pellentesque aliquet. Gravida egestas porttitor sem tincidunt venenatis. Congue eget vulputate.</p>
-
-
+        <div className="aboutus-section" id="about-us">
+            <div className="aboutus-main">
+                <div className="aboutus-wrapper">
+                    <div className="aboutus-headers">
+                        <h1 className="aboutus-title">About Us</h1>
                     </div>
 
-
+                    <div className="aboutus-content">
+                        <p>
+                            Cape Verde Businesses will now be able to keep high quality products in inventory by utilizing our super fast air cargo services.
+                        </p>
+                        <p>
+                            Additionally, our ultra competitive pricing will give every Cape Verdean access to e-Commerce products from United States, Europe, Africa, and South America. 
+                            Your items will arrive in Cape Verde on our weekly scheduled flights and will be ready for pick up in just 10 days or less.
+                        </p>
+                    </div>
                 </div>
 
-
-
-
-
-
-
-
+                <div className="aboutus-container">
+                    <ManualVideoPlayer 
+                        videoSrc={aboutVideo}
+                    />
+                </div>
             </div>
-        
-       
-    </div>
-  )
+        </div>
+    );
 }

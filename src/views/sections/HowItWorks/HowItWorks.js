@@ -1,57 +1,46 @@
-import { useState, useEffect} from 'react';
-import  axios  from 'axios';
-import  VideoPlayer  from '../../../components/VideoPlayer/VideoPlayer';
-import "./styles.css";
+import React from 'react';
+import './styles.css';
 
-export default function HowItWorks(){
-
-    const [data, setData] = useState({});
-
-    useEffect(() => {
-        axios.get('https://youtube.com')
-            .then(response => setData(response.data))
-            .catch(() => {
-                setData({
-                    title: "How It Works",
-                    subtitle: "Receive your packages",
-                    span: "faster",
-                    content: "Watch this simple step by step video, and see how you can receive all your orders from anywhere quicker than ever!",
-                    videoTitle: "Video Title",
-                    url: "https://www.youtube.com/embed/tgbNymZ7vqY",
-                });
-            });
-    }, []);
-
+export default function HowItWorks() {
     return (
         <div className="howitworks" id="how-it-works">
             <div className="hiw-main">
-                <div className="hiwwrapper">
-
+                <div className="hiw-wrapper">
                     <div className="hiw-Headers">
-                        <h1 className="hiw-title">{data.title}</h1>
-                        <p className="hiw-subtitle">{data.subtitle}&nbsp;<span>{data.span}</span> </p>
+                        <h1 className="hiw-title">HOW IT WORKS</h1>
+                        <p className="hiw-subtitle">
+                            Receive Your Packages <span>Super Fast</span>
+                        </p>
                     </div>
 
                     <div className="hiw-content">
                         <p>
-                        {data.content}
+                            Watch this simple step by step video, and see how you can receive all your orders from anywhere quicker than ever!
                         </p>
                     </div>
-
                 </div>
 
                 <div className="hiw-container">
-
-                <VideoPlayer
-                title={data.videoTitle}
-                src={data.url}
-                className="videoplayer"
-                />
+                    <div className="video-placeholder">
+                        <div className="placeholder-content">
+                            <svg 
+                                viewBox="0 0 24 24" 
+                                className="play-icon" 
+                                fill="none" 
+                                stroke="currentColor" 
+                                strokeWidth="2"
+                                strokeLinecap="round" 
+                                strokeLinejoin="round"
+                            >
+                                <circle cx="12" cy="12" r="10" />
+                                <polygon points="10 8 16 12 10 16 10 8" />
+                            </svg>
+                            <p className="coming-soon-text">Video Coming Soon</p>
+                            <p className="coming-soon-subtext">We're creating an amazing step-by-step guide for you</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-           
-
-
         </div>
-    )
+    );
 }

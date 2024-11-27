@@ -56,6 +56,7 @@ router.post("/login", (req, res) => {
  * @return  JSON { accessToken: String, user: { id: String, email: String, token: String }}
  */
 router.post("/ForgetPassword", (req, res) => {
+  const baseUrl = "https://cabo-air-cargo.onrender.com/api";
   User.findOne({ email: req.body.email })
     .then((user) => {
       const resetToken = crypto.randomBytes(20).toString("hex");
@@ -64,7 +65,7 @@ router.post("/ForgetPassword", (req, res) => {
       user
         .save()
         .then(() => {
-          const link = `${process.env.BASE_URL}/user/ResetPassword?resetToken=${resetToken}`;
+          const link = `${baseUrl}/user/ResetPassword?resetToken=${resetToken}`;
           sendEmail(user.email, "Password Reset", link);
           res.status(202).json({ msg: "Reset password email sent", link });
         })
@@ -106,6 +107,18 @@ router.post("/ResetPassword", (req, res) => {
     .catch(() => {
       res.status(400).json({ err: `Invalid or expired reset token` });
     });
+});
+
+/**
+ * @route   GET /api/user/logout
+ * @desc    Logout user
+ * @return  JSON { msg: String }
+ */
+router.post("/logout", (req, res) => {
+  res.setHeader("Authorization", "");
+  res.setHeader("X-User-ID", "");
+  res.clearCookie("token");
+  return res.status(200).json({ message: "Successfully logged out" });
 });
 
 export default router;

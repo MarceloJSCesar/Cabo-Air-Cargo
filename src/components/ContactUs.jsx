@@ -5,7 +5,7 @@ import './ContactUs.css';
 
 const ContactUs = () => {
     return (
-        <div className="contact_container">
+        <div className="contact_container" id='contact-us'>
             <div className="MAIN">
                 <div className="contacts">
                     <h1 className="title">Contatos</h1>
@@ -42,7 +42,7 @@ const ContactUs = () => {
                         <div className="item">
                             <a href="mailto:info@caboaircargo.com" className="mail-button">
                                {/* Mail Us */}
-                               Envie-nos um e-mail
+                               Envie e-mail
                                 <Mail size={20} style={{marginLeft: '4px'}}/>
                             </a>
                         </div>

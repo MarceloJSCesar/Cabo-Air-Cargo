@@ -10,7 +10,7 @@ function Header() {
     const navItems = [
         {
             name: 'Home',
-            href: '#home',
+            href: '#',
         },
         {
             name: 'Como Funciona',

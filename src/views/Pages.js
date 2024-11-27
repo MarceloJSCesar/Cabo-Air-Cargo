@@ -7,10 +7,11 @@ import AboutUs from './sections/AboutUs/AboutUs';
 export default function Pages() {
   return (
     <>
-        <HomeSection img={img}/>
-        <HowItWorks />
-        <AboutUs />
-        <ContactUs />
+      <HomeSection />
+      <HowItWorks />
+      <AboutUs />
+      <ContactUs /> 
+      <Footer />
         
     </>
   )

@@ -1,9 +1,10 @@
-import { FaLinkedin, FaInstagram, FaFacebook, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
+import React from 'react';
+import { MapPin, Mail } from 'lucide-react';
+import { FaInstagram, FaLinkedin} from 'react-icons/fa';
 import './ContactUs.css';
 
 const ContactUs = () => {
     return (
-
         <div className="contact_container">
             <div className="MAIN">
                 <div className="contact-wrapper">
@@ -42,15 +43,11 @@ const ContactUs = () => {
                                 </a>
                             </div>
                         </div>                    
-
-
                     </div>
                     <div className='map'>
                         <img src="map.png" alt="map" className="mapImg"/>
                     </div>
                 </div>    
-
-
             </div>
         </div>
     );

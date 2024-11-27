@@ -1,11 +1,16 @@
 import mongoose from "mongoose";
 const { Schema } = mongoose;
 
-const aboutUs_schema = new Schema({
-  title: { type: String, required: true },
-  rightTxt: { type: String, required: true },
-  leftTxt: { type: String, required: true },
-});
+const aboutUs_schema = new Schema(
+  {
+    title: { type: String, required: true },
+    description: { type: String, required: true },
+    videoUrl: { type: String, required: true },
+  },
+  {
+    timestamps: true,
+  }
+);
 
 const aboutUs = mongoose.model("aboutUs", aboutUs_schema);
 

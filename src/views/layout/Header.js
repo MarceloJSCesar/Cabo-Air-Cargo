@@ -1,15 +1,14 @@
-import { HStack, Box, VStack } from "@chakra-ui/react";
+import { HStack, Box } from "@chakra-ui/react";
 import RightContent from "../../components/navbar/RightContent";
 import LeftContent from "../../components/navbar/LeftContent";
-
-import img from "../../assets/default/plane.png";
+import img from "../../assets/header-img.jpg";
 import HomeSection from "../sections/HomeSection";
 import MenuDrawer from "../../components/MenuDrawer/MenuDrawer";
+import './Header.css';
 
 import MenuDrawer from "../../components/MenuDrawer/MenuDrawer";
 
 function Header() {
-
     const navItems = [
         {
             name: 'Home',
@@ -30,7 +29,6 @@ function Header() {
     ];
 
     return (
-            
             <Box
                 bgSize='cover'
                 bgPos='center'
@@ -47,29 +45,34 @@ function Header() {
 
             >
                 <HStack 
+        <Box
+            position="relative"
+            id="home-section"
+            overflow="hidden"
+        >
+            <HStack 
                 h='10vh'
-                minW='100vw' 
+                minW='100%' 
                 p={2} 
-                bg='blackAlpha.500'
-                alignSelf='start' 
+                bg='transparent'
                 justifyContent='space-between' 
                 position='absolute'
-                z-index='5000'
-                >
-                
-                    <LeftContent />
-                    
-                    <RightContent navItems={navItems}/>
-
-                    <HStack>
-                        <button className="menuButton">
-                            <MenuDrawer navItems={navItems} />
-                        </button>
-                    </HStack>
+                top={0}
+                left={0}
+                zIndex={1000}
+            >
+                <LeftContent />
+                <RightContent navItems={navItems}/>
+                <p className="navbar-mobile-title">Cabo Air Cargo</p>
+                <HStack>
+                    <button className="menuButton">
+                        <MenuDrawer navItems={navItems} />
+                    </button>
                 </HStack>
-
-            </Box>
+            </HStack>
+            <HomeSection img={img}/>
+        </Box>
     );
-};
+}
 
 export default Header;

@@ -30,7 +30,7 @@ export default function MenuDrawer({ navItems }) {
         <div className="MenuDrawerHeader">
           <div className="MenuDrawerLeft">
             <h1 className="MenuDrawerHeaderTitle">CABO AIR CARGO</h1>
-            <p className="MenuDrawerHeaderSubtitle">menu</p>
+            {/* <p className="MenuDrawerHeaderSubtitle">menu</p> */}
           </div>
           {/* Optionally add a close button inside the drawer
           <img src={X} alt="Close" className="MenuDrawerHeaderX" onClick={toggleDrawer} /> */}
@@ -52,7 +52,7 @@ export default function MenuDrawer({ navItems }) {
         </div>
 
         <div className="MenuDrawerFooter">
-          2024©CABO AIR CARGO
+          Copyright All Reserved 2024 © CABO AIR CARGO
         </div>
       </div>
     </div>

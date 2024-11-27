@@ -6,14 +6,15 @@
   color: #333;
   font-family: Arial, sans-serif;
   flex-wrap: wrap;
-  gap: 1rem; 
+  gap: 1rem;
 }
 
 .footer-logo,
 .footer-links,
 .footer-socials,
 .footer-locations,
-.footer-contact {
+.footer-contact,
+.footer-phone {
   flex: 1;
 }
 
@@ -56,14 +57,16 @@
 .footer-links,
 .footer-socials,
 .footer-locations,
-.footer-contact {
+.footer-contact,
+.footer-phone {
   text-align: center;
 }
 
 .footer-links h3,
 .footer-socials h3,
 .footer-locations h3,
-.footer-contact h3 {
+.footer-contact h3,
+.footer-phone h3 {
   color: #004aad;
   margin-bottom: 10px;
   font-weight: bold;
@@ -71,14 +74,16 @@
 
 .footer-links ul,
 .footer-socials ul,
-.footer-locations ul {
+.footer-locations ul,
+.footer-phone ul {
   list-style-type: none;
   padding: 0;
 }
 
 .footer-links li,
 .footer-socials li,
-.footer-locations li {
+.footer-locations li,
+.footer-phone li {
   margin: 5px 0;
   cursor: pointer;
 }
@@ -109,4 +114,60 @@
 .footer-contact-button:hover {
   background-color: #333;
   color: #fff;
+}
+
+@media only screen and (max-width: 760px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 1rem;
+  }
+
+  .footer-logo-image {
+    width: 70px;
+    height: auto;
+  }
+
+  .footer-logo h3 {
+    font-size: 1.2em;
+    margin: 0.5rem 0;
+  }
+
+  .footer-description {
+    font-size: 0.9em;
+    max-width: 300px;
+    margin: 0.5rem 0;
+    text-align: center; 
+  }
+
+  .footer-social-logos,
+  .footer-links,
+  .footer-socials,
+  .footer-locations,
+  .footer-contact {
+    display: none;
+  }
+
+  .footer::after {
+    content: "Copyright All Reserved 2024 © CABO AIR CARGO";
+    font-size: 0.8em;
+    color: #333;
+    margin-top: 1rem;
+    text-align: center;
+  }
 }

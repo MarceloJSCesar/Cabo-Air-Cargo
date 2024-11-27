@@ -1,7 +1,8 @@
 import React from 'react';
 import './styles.css';
-import logo from '../../../assets/default/logo.png';
+import logo from '../../../assets/default/cac-logo-no-bg.png';
 import { FaInstagram, FaLinkedin, FaFacebook, FaPaperPlane } from 'react-icons/fa';
+import { Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -9,44 +10,58 @@ const Footer = () => {
 		<div className="footer-logo">
 			<div className="footer-logo-container">
 				<img src={logo} alt="Logo" className="footer-logo-image" />
-				<h3>CABO AIR CARGO</h3>
 			</div>
-				<p className='footer-description'>Lorem ipsum dolor sit amet consectetur. Eros et aliquam amet aliquet vivamus convallis elit pellentesque</p>
+				<h3>CABO AIR CARGO</h3>
+				<p className='footer-description'>
+					{/* Let's Make History Together */}
+					Vamos Fazer História Juntos
+				</p>
 				<div className="footer-social-logos">
-					<FaInstagram />
-					<FaLinkedin />
-					<FaFacebook />
+					<a href="https://www.instagram.com/barlavento_aviation" target='_blank'> <FaInstagram /> </a>
+					<a href="https://www.linkedin.com/company/barlavento-aviation-consulting-solutions/" target='_blank'> <FaLinkedin /> </a>
+					{/* <FaFacebook /> */}
 				</div>
 	  </div>
 	  <div className="footer-links">
 		<h3>LINKS</h3>
 		<ul>
-			<li>Home</li>
-			<li>How it works</li>
-			<li>About us</li>
-			<li>Contacts</li>
+			<li><a href="#"> Home </a></li>
+			<li><a href="#how-it-works"> Como Funciona </a></li>
+			<li><a href="#about-us"> Sobre Nós </a></li>
+			<li><a href="#contact-us"> Contatos </a></li>
 		</ul>
 		</div>
 		<div className="footer-socials">
 			<h3><em>SOCIALS</em></h3>
 			<ul>
-				<li>Facebook</li>
-				<li>LinkedIn</li>
-				<li>Instagram</li>
+				<li> <a href="https://www.instagram.com/barlavento_aviation" target='_blank'> LinkedIn </a></li>
+				<li> <a href="https://www.linkedin.com/company/barlavento-aviation-consulting-solutions/" target='_blank'> Instagram </a></li>
 			</ul>
 		</div>
 		<div className="footer-locations">
-			<h3>LOCATIONS</h3>
+			<h3>
+				{/* LOCATIONS */}
+				LOCALIZAÇÕES
+			</h3>
 			<ul>
 				<li>Cape Verde</li>
-				<li>Netherlands</li>
-				<li>USA</li>
+				<li>Europe</li>
 			</ul>
 	 	</div>
 		<div className="footer-contact">
-			<h3>GET IN TOUCH</h3>
-			<p>Question or feedback?</p>
-			<button className="footer-contact-button">Mail us <FaPaperPlane /></button>
+			<h3>
+				{/* GET IN TOUCH */}
+				ENTRAR EM CONTACTO
+			</h3>
+			<p>
+				{/* Question or feedback? */}
+				Pergunta ou Feedback?
+			</p>
+			<a href="mailto:info@caboaircargo.com" className="mail-button">
+                                {/* Mail Us */}
+								Envie e-mail
+                                <Mail size={20} style={{marginLeft: '4px'}}/>
+                            </a>
 		</div>
 	</footer>
   );

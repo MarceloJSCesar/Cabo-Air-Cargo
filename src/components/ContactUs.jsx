@@ -10,7 +10,8 @@ const ContactUs = () => {
                 <div className="contacts">
                     <h1 className="title">Contatos</h1>
                     <p className="subtitle">
-                        Where Can You <span className="find">Find <span>Us</span></span>
+                       {/* Where Can You <span className="find">Find <span>Us</span></span> */}
+                       Onde nos pode <span className="find"> <span>encontrar</span></span>
                     </p>
                     <div className="socials">
                         <div className="item">
@@ -40,8 +41,9 @@ const ContactUs = () => {
                         
                         <div className="item">
                             <a href="mailto:info@caboaircargo.com" className="mail-button">
-                                Mail Us 
-                                <Mail size={20} style={{marginLeft: '6px'}}/>
+                               {/* Mail Us */}
+                               Envie-nos um e-mail
+                                <Mail size={20} style={{marginLeft: '4px'}}/>
                             </a>
                         </div>
                     </div>

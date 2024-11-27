@@ -32,4 +32,6 @@ app.use("/api/s3", aboutus);
 // createUser();
 
 const Port = 8000;
-app.listen(Port, () => console.log(`App running http://localhost:${Port}`));
+app.listen(Port, () =>
+  console.log(`App running on https://cabo-air-cargo.onrender.com`)
+);

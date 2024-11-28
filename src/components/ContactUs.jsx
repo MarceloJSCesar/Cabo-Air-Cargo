@@ -29,7 +29,8 @@ const ContactUs = () => {
                                 LinkedIn
                             </a>
                         </div>
-
+                        
+                    {/*
                         <div className="item">
                             <div className="icon-wrapper">
                                 <FaWhatsapp className="icon" size={24} />
@@ -38,6 +39,7 @@ const ContactUs = () => {
                                 Whatsapp
                             </a>
                         </div>
+                    */}
                         
                         <div className="item">
                             <div className="icon-wrapper">

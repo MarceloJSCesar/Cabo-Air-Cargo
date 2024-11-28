@@ -3,9 +3,9 @@ const { Schema } = mongoose;
 
 const aboutUs_schema = new Schema(
   {
-    title: { type: String, required: true },
-    description: { type: String, required: true },
-    videoUrl: { type: String, required: true },
+    title: { type: String },
+    description: { type: String },
+    videoUrl: { type: String },
   },
   {
     timestamps: true,

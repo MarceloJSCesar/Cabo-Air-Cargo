@@ -56,7 +56,7 @@ router.post("/login", (req, res) => {
  * @return  JSON { accessToken: String, user: { id: String, email: String, token: String }}
  */
 router.post("/ForgetPassword", (req, res) => {
-  const baseUrl = "https://cabo-air-cargo.onrender.com/api";
+  const baseUrl = "http://localhost:3000/api";
   User.findOne({ email: req.body.email })
     .then((user) => {
       const resetToken = crypto.randomBytes(20).toString("hex");

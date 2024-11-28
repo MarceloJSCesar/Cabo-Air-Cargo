@@ -1,6 +1,6 @@
 import React from 'react';
 import { MapPin, Mail } from 'lucide-react';
-import { FaInstagram, FaLinkedin} from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaWhatsapp} from 'react-icons/fa';
 import './ContactUs.css';
 
 const ContactUs = () => {
@@ -27,6 +27,15 @@ const ContactUs = () => {
                             </div>
                             <a href="https://www.linkedin.com/company/barlavento-aviation-consulting-solutions/" target="_blank" rel="noopener noreferrer">
                                 LinkedIn
+                            </a>
+                        </div>
+
+                        <div className="item">
+                            <div className="icon-wrapper">
+                                <FaWhatsapp className="icon" size={24} />
+                            </div>
+                            <a href="https://api.whatsapp.com/send?phone=18083040153&text=Ola%F0%9F%91%8B.%20Eu%20quero%20saber%20mais%20sobre%20Cabo%20Air%20Cargo." target="_blank" rel="noopener noreferrer">
+                                Whatsapp
                             </a>
                         </div>
                         

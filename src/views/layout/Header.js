@@ -1,7 +1,7 @@
 import { HStack, Box } from "@chakra-ui/react";
 import RightContent from "../../components/navbar/RightContent";
 import LeftContent from "../../components/navbar/LeftContent";
-import img from "../../assets/header-img.jpg";
+// import img from "../../assets/header-img.jpg";
 import HomeSection from "../sections/HomeSection";
 import MenuDrawer from "../../components/MenuDrawer/MenuDrawer";
 import './Header.css';
@@ -53,7 +53,7 @@ function Header() {
                 </HStack>
             </HStack>
 
-            <HomeSection img={img}/>
+            <HomeSection />
         </Box>
     );
 }

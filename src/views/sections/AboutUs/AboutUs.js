@@ -15,7 +15,7 @@ export default function AboutUs() {
     useEffect(() => {
         const fetchAboutUsContent = async () => {
             try {
-                const response = await axios.get('https://cabo-air-cargo.onrender.com/api/aboutus');
+                const response = await axios.get('https://cabo-air-cargo.onrender.com/api/s3/aboutus');
                 setAboutUsContent({
                     title: response.data.title || 'Sobre Nós',
                     paragraph1: response.data.paragraph1 || 'As empresas de Cabo Verde poderão agora manter produtos de alta qualidade em stock, utilizando os nossos serviços de carga aérea super rápidos.',

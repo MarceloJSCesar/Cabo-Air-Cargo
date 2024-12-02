@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import React from 'react';
 import './styles.css';
 import ManualVideoPlayer from '../../../components/Manual-VideoPlayer/Manual_VideoPlayer';
 import aboutVideo from '../../../assets/how-it-works.mp4'; // Make sure to add your video file

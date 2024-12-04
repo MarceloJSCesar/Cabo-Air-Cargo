@@ -5,11 +5,20 @@ import ManualVideoPlayer from '../../../components/Manual-VideoPlayer/Manual_Vid
 import aboutVideo from '../../../assets/how-it-works.mp4'; // Make sure to add your video file
 
 export default function AboutUs() {
+    function isValidMp4Url(url) {
+        try {
+          const parsedUrl = new URL(url);
+          return parsedUrl.pathname.endsWith(".mp4");
+        } catch (e) {
+          return false;
+        }
+      }
+    
     const [aboutUsContent, setAboutUsContent] = useState({
         title: '',
         paragraph1: '',
         paragraph2: '',
-        videoUrl: '',
+        videoUrl: isValidMp4Url(videoUrl) ? videoUrl : aboutVideo,
     });
 
     useEffect(() => {

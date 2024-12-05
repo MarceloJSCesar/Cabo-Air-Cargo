@@ -1,7 +1,27 @@
 import { Box, Image } from '@chakra-ui/react';
 import { useBreakpointValue } from '@chakra-ui/react';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
-function HomeSection({ img }) {
+function HomeSection() {
+  const [img, setImg] = useState('');
+
+  // Fetch the image URL from the API
+  useEffect(() => {
+    const fetchImg =  async () => {
+      try {
+        const response =  await axios.get('https://cabo-air-cargo.onrender.com/api/s1/herobanner');
+        setImg(response.data.imgUrl);
+        console.log('Image URL:', response.data.imgUrl);
+      } catch (error) {
+        console.error('Error fetching the image URL:', error);
+      }
+    };
+
+    fetchImg();
+  }, []);
+
+
   const containerHeight = useBreakpointValue({ 
     base: '35vh',    // Smaller height for mobile
     sm: '45vh',      // Medium height for small tablets

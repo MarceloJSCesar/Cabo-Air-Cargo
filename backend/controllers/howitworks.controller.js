@@ -1,35 +1,6 @@
 import express from "express";
 const router = express.Router();
-
 import howItWorks from "../models/howitworks.model.js";
-
-/**
- * @route   POST /api/s2/howitworks
- * @desc    Add how it works content
- * @return  JSON { message: String, savedHowItWorks: { title: String, description: String, videoUrl: String }}
- */
-router.post("/howitworks", async (req, res) => {
-  const { title, description, videoUrl } = req.body;
-  if (!title || !description || !videoUrl) {
-    return res.status(400).json("Please fill all fields...");
-  }
-
-  const newHowItWorks = new howItWorks({
-    title,
-    description,
-    videoUrl,
-  });
-
-  try {
-    const savedHowItWorks = await newHowItWorks.save();
-    res.status(200).json({
-      message: "How it works content added successfully",
-      savedHowItWorks,
-    });
-  } catch (err) {
-    res.status(500).json({ err: err, error: "Something went wrong" });
-  }
-});
 
 /**
  * @route   GET /api/s2/howitworks
@@ -38,43 +9,47 @@ router.post("/howitworks", async (req, res) => {
  */
 router.get("/howitworks", async (req, res) => {
   try {
-    const allHowItWorks = await howItWorks.findOne();
-    res.status(200).json(allHowItWorks);
+    const howitworks = await howItWorks.findOne();
+
+    if (!howitworks || howitworks.length === 0) {
+      return res
+        .status(404)
+        .json({ message: "How it works details not found" });
+    }
+
+    res.status(200).json(howitworks);
   } catch (error) {
+    console.error("Error fetching How it works details:", error);
     res
       .status(500)
-      .json({ err: error, error: "Something went wrong! Please try again." });
+      .json({ message: "Internal server error. Please try again later." });
   }
 });
 
 /**
- * @route   PUT /api/s2/howitworks
- * @desc    update how it works content
+ * @route   PATCH /api/s2/howitworks
+ * @desc    update how it works content (title, description, videoUrl) or create if not exists
  * @return  JSON { message: String, updatedHowItWorks: { title: String, description: String, videoUrl: String }}
  */
-router.put("/howitworks", async (req, res) => {
-  const { title, description, videoUrl } = req.body;
-
-  if (!title || !description || !videoUrl) {
-    return res.status(400).json("Please fill all fields...");
-  }
+router.patch("/howitworks", async (req, res) => {
+  const data = Object.fromEntries(
+    Object.entries(req.body).filter(
+      ([_, value]) => value !== null && value !== ""
+    )
+  );
 
   try {
-    const updatedHowItWorks = await howItWorks.findOneAndUpdate(
-      req.params.id,
-      {
-        title,
-        description,
-        videoUrl,
-      },
-      { new: true }
+    const howitworks = await howItWorks.findOneAndUpdate(
+      {},
+      { $set: data },
+      { new: true, upsert: true }
     );
-    res.status(200).json({
-      message: "How it works content updated successfully",
-      updatedHowItWorks,
-    });
-  } catch (err) {
-    res.status(500).json({ err: err, error: "Something went wrong" });
+    res.status(200).json({ howitworks });
+  } catch (error) {
+    console.error("Error updating How it works details:", error);
+    res
+      .status(500)
+      .json({ message: "Internal server error. Please try again later." });
   }
 });
 

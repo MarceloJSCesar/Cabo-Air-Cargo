@@ -1,34 +1,6 @@
 import express from "express";
 const router = express.Router();
-
 import AboutUs from "../models/aboutus.model.js";
-
-/**
- * @route   POST /api/s3/aboutus
- * @desc    Add about us content
- * @return  JSON { message: String, savedAboutUs: { title: String, description: String, videoUrl: String }}
- */
-router.post("/aboutus", async (req, res) => {
-  const { title, description, videoUrl } = req.body;
-
-  if (!title || !description || !videoUrl) {
-    return res.status(400).json("Please fill all fields...");
-  }
-
-  const newAboutUs = new AboutUs({ title, description, videoUrl });
-  try {
-    const savedAboutUs = await newAboutUs.save();
-    res.status(200).json({
-      message: "About us content added successfully",
-      savedAboutUs,
-    });
-  } catch (err) {
-    res.status(500).json({
-      err: err,
-      error: "Something went wrong! Please try again.",
-    });
-  }
-});
 
 /**
  * @route   GET /api/s3/aboutus
@@ -37,43 +9,44 @@ router.post("/aboutus", async (req, res) => {
  */
 router.get("/aboutus", async (req, res) => {
   try {
-    const aboutUs = await AboutUs.find();
+    const aboutUs = await AboutUs.findOne();
+
+    if (!aboutUs || aboutUs.length === 0) {
+      return res.status(404).json({ message: "About Us details not found" });
+    }
+
     res.status(200).json(aboutUs);
-  } catch (err) {
-    res.status(500).json({
-      err: err,
-      error: "Something went wrong! Please try again.",
-    });
+  } catch (error) {
+    console.error("Error fetching About Us details:", error);
+    res
+      .status(500)
+      .json({ message: "Internal server error. Please try again later." });
   }
 });
-
 /**
- * @route   PUT /api/s3/aboutus/
- * @desc    Update about us content
+ * @route   PATCH /api/s3/aboutus/
+ * @desc    Update about us content (title, description, videoUrl) or create if not exists
  * @return  JSON { message: String, updatedAboutUs: { title: String, description: String, videoUrl: String }}
  */
-router.put("/aboutus", async (req, res) => {
-  const { title, description, videoUrl } = req.body;
-
-  if (!title || !description || !videoUrl) {
-    return res.status(400).json("Please fill all fields...");
-  }
+router.patch("/aboutus", async (req, res) => {
+  const data = Object.fromEntries(
+    Object.entries(req.body).filter(
+      ([_, value]) => value !== null && value !== ""
+    )
+  );
 
   try {
-    const updatedAboutUs = await AboutUs.findOneAndUpdate(
-      req.params.id,
-      { title, description, videoUrl },
-      { new: true }
+    const aboutus = await AboutUs.findOneAndUpdate(
+      {},
+      { $set: data },
+      { new: true, upsert: true }
     );
-    res.status(200).json({
-      message: "About us content updated successfully",
-      updatedAboutUs,
-    });
+    res.status(200).json({ aboutus });
   } catch (err) {
-    res.status(500).json({
-      err: err,
-      error: "Something went wrong! Please try again.",
-    });
+    console.error("Error updating About Us details:", err);
+    res
+      .status(500)
+      .json({ message: "Internal server error. Please try again later." });
   }
 });
 

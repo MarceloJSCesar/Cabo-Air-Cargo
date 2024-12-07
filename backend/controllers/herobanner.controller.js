@@ -13,9 +13,7 @@ router.patch("/updateBanner", upload.single("heroBanner"), async (req, res) => {
   try {
     const response = await handleUpload(req.file);
 
-    deleteAll().catch((err) =>
-      console.error("Error deleting old images:", err)
-    );
+    // await deleteAll();
 
     const updatedBanner = await herobanner.findOneAndUpdate(
       {},
@@ -26,7 +24,6 @@ router.patch("/updateBanner", upload.single("heroBanner"), async (req, res) => {
     if (!updatedBanner) {
       return res.status(500).json({ error: "Failed to update banner" });
     }
-
     res.status(200).json({
       imgUrl: updatedBanner.imgUrl,
     });

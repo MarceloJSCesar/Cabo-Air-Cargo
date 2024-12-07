@@ -1,6 +1,5 @@
 import { v2 as cloudinary } from "cloudinary";
 import multer from "multer";
-import streamifier from "streamifier";
 import sharp from "sharp";
 
 // cloudinary config
@@ -16,13 +15,8 @@ const upload = multer({ storage });
 
 const handleUpload = async (file) => {
   try {
-    // Compress and resize the image using sharp (800px width, 80% quality)
-    const buffer = await sharp(file.buffer)
-      .resize({ width: 800 }) // Maintain aspect ratio
-      .jpeg({ quality: 80 }) // Compress to JPEG with quality 80%
-      .toBuffer();
+    const buffer = await sharp(file.buffer).jpeg({ quality: 100 }).toBuffer();
 
-    // Upload the processed image buffer directly to Cloudinary
     const response = await cloudinary.uploader.upload(
       `data:image/jpeg;base64,${buffer.toString("base64")}`,
       {
@@ -34,8 +28,7 @@ const handleUpload = async (file) => {
 
     return response;
   } catch (error) {
-    console.error("Error in handleUpload:", error);
-    throw new Error("Image processing or upload failed");
+    console.log("Error uploading image:", error);
   }
 };
 

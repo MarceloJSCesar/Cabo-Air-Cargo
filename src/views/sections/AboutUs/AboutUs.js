@@ -15,10 +15,10 @@ export default function AboutUs() {
       }
     
     const [aboutUsContent, setAboutUsContent] = useState({
-        title: '',
-        paragraph1: '',
-        paragraph2: '',
-        videoUrl: isValidMp4Url(videoUrl) ? videoUrl : aboutVideo,
+        title: 'Sobre Nós',
+        paragraph1: 'As empresas de Cabo Verde poderão agora manter produtos de alta qualidade em stock, utilizando os nossos serviços de carga aérea super rápidos.',
+        paragraph2: 'Além disso, os nossos preços ultra competitivos darão a todos os cabo-verdianos acesso a produtos de comércio eletrónico dos Estados Unidos, Europa, África e América do Sul. Os seus artigos chegarão a Cabo Verde nos nossos voos semanais regulares e estarão prontos para serem recolhidos em apenas 10 dias ou menos.',
+        videoUrl: aboutVideo,
     });
 
     useEffect(() => {

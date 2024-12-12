@@ -1,48 +1,58 @@
 import React, { useState } from 'react';
 import './WaitlistComponent.css';
+import { collection, addDoc, query, where, getDocs } from 'firebase/firestore';
+import { db } from '../../config/firebase';
 
 const WaitlistComponent = () => {
   const [email, setEmail] = useState('');
   const [isValid, setIsValid] = useState(false);
   const [message, setMessage] = useState('');
   const [messageType, setMessageType] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validateEmail = (email) => {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return regex.test(email);
   };
 
   const handleEmailChange = (e) => {
-    const newEmail = e.target.value;
+    const newEmail = e.target.value.toLowerCase().trim();
     setEmail(newEmail);
     setIsValid(validateEmail(newEmail));
     setMessage('');
   };
 
   const handleSubmit = async () => {
-    if (!isValid) return;
+    if (!isValid || isSubmitting) return;
+    
+    setIsSubmitting(true);
     
     try {
-      const response = await fetch('YOUR_API_ENDPOINT', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
+      const emailsRef = collection(db, "emails");
+      const q = query(emailsRef, where("email", "==", email));
+      const querySnapshot = await getDocs(q);
 
-      if (response.ok) {
-        setMessage('Obrigado por se juntar à lista de espera!');
+      if (querySnapshot.empty) {
+        await addDoc(emailsRef, {
+          email: email,
+          timestamp: new Date(),
+          source: 'website_waitlist'
+        });
+
+        setMessage('Obrigado pelo seu interesse! Em breve receberá novidades exclusivas.');
         setMessageType('success');
         setEmail('');
         setIsValid(false);
       } else {
-        setMessage('Algo deu errado. Por favor, tente novamente.');
-        setMessageType('error');
+        setMessage('Este email já está registrado na nossa lista de espera.');
+        setMessageType('warning');
       }
     } catch (error) {
-      setMessage('Erro ao enviar e-mail. Por favor, tente novamente.');
+      console.error("Error:", error);
+      setMessage('Não foi possível registrar seu email. Por favor, tente novamente.');
       setMessageType('error');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -64,21 +74,22 @@ const WaitlistComponent = () => {
               onChange={handleEmailChange}
               placeholder="Digite seu email"
               className="email-input"
+              disabled={isSubmitting}
             />
             
             <button
               onClick={handleSubmit}
-              disabled={!isValid}
+              disabled={!isValid || isSubmitting}
               className="submit-button"
             >
-              Juntar
+              {isSubmitting ? 'Enviando...' : 'Juntar'}
             </button>
           </div>
           
           {message && (
-            <p className={`message ${messageType === 'success' ? 'success-message' : 'error-message'}`}>
+            <div className={`message-container ${messageType}-message`}>
               {message}
-            </p>
+            </div>
           )}
         </div>
       </div>

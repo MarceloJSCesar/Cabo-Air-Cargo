@@ -10,7 +10,7 @@ export const sendEmail = (email, subject, text) => {
   });
 
   let mailOptions = {
-    from: `Cabo Air Cargo <marcelo@linkmup.com>`,
+    from: 'marcelo@linkmup.com',
     to: email,
     subject: `${subject} | Cabo Air Cargo`,
     text: text,

@@ -10,7 +10,7 @@ export const sendEmail = (email, subject, text) => {
   });
 
   let mailOptions = {
-    from: 'marcelo@linkmup.com',
+    from: 'Cabo Air Cargo <' + process.env.MAIL_USERNAME + '>',
     to: email,
     subject: `${subject} | Cabo Air Cargo`,
     text: text,

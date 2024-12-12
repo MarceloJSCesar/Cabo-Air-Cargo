@@ -10,9 +10,9 @@ export const sendEmail = (email, subject, text) => {
   });
 
   let mailOptions = {
-    from: process.env.MAIL_USERNAME,
+    from: `Cabo Air Cargo <marcelo@linkmup.com>`,
     to: email,
-    subject: subject,
+    subject: `${subject} | Cabo Air Cargo`,
     text: text,
     html: `<p>Hello,</p>
     <p>We have received a request to reset your password. If you did not make this request, please ignore this email.</p>

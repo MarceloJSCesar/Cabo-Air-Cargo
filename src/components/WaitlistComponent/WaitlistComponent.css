@@ -123,19 +123,19 @@
 
 .success-message {
     background-color: rgba(5, 150, 105, 0.1);
-    color: #059669;
+    color: #ffffff;
     border: 1px solid rgba(5, 150, 105, 0.2);
 }
 
 .error-message {
     background-color: rgba(220, 38, 38, 0.1);
-    color: #DC2626;
+    color: #ffffff;
     border: 1px solid rgba(220, 38, 38, 0.2);
 }
 
 .warning-message {
     background-color: rgba(251, 191, 36, 0.1);
-    color: #D97706;
+    color: #ffffff;
     border: 1px solid rgba(251, 191, 36, 0.2);
 }
 

@@ -104,16 +104,45 @@
     cursor: not-allowed;
 }
 
-.message {
-    margin-top: 8px;
+.message-container {
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px 16px;
+    border-radius: 8px;
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 14px;
     line-height: 20px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
+.success-message {
+    background-color: rgba(5, 150, 105, 0.1);
+    color: #059669;
+    border: 1px solid rgba(5, 150, 105, 0.2);
+}
+
+.error-message {
+    background-color: rgba(220, 38, 38, 0.1);
+    color: #DC2626;
+    border: 1px solid rgba(220, 38, 38, 0.2);
+}
+
+.warning-message {
+    background-color: rgba(251, 191, 36, 0.1);
+    color: #D97706;
+    border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+.message-icon {
+    width: 20px;
+    height: 20px;
+}
 .success-message {
     color: #059669;
 }
@@ -137,6 +166,15 @@
 
 /* Desktop styles */
 @media (min-width: 1024px) {
+
+    .message-container {
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: 10px;
+        text-align: left;
+        padding: 16px 24px;
+    }
+    
     .waitlist-main {
         flex-direction: row;
         justify-content: space-between;

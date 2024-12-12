@@ -56,7 +56,7 @@ router.post("/login", (req, res) => {
  * @return  JSON { accessToken: String, user: { id: String, email: String, token: String }}
  */
 router.post("/ForgetPassword", (req, res) => {
-  const baseUrl = "https://admin.caboaircargo.com/api";
+  const url = "https://admin.caboaircargo.com/api";
   User.findOne({ email: req.body.email })
     .then((user) => {
       const resetToken = crypto.randomBytes(20).toString("hex");
@@ -65,8 +65,8 @@ router.post("/ForgetPassword", (req, res) => {
       user
         .save()
         .then(() => {
-          const link = `${baseUrl}/user/ResetPassword?resetToken=${resetToken}`;
-          sendEmail(user.email, "Password Reset", link);
+          const link = `${url}/user/ResetPassword?resetToken=${resetToken}`;
+          sendEmail(user.email, "Reset Password link", link);
           res.status(202).json({ msg: "Reset password email sent", link });
         })
         .catch(() => {

@@ -1,0 +1,182 @@
+/* Waitlist section styles */
+.waitlist-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #82A1C4;
+    padding: 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.waitlist-main {
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.waitlist-wrapper {
+    max-width: 100%;
+    width: 100%;
+}
+
+.waitlist-headers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 12px;
+}
+
+.waitlist-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #00428C;
+    margin: 0;
+}
+
+.waitlist-form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.email-input {
+    width: 100%;
+    padding: 12px 15px;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #374151;
+}
+
+.email-input:focus {
+    outline: none;
+    border-color: #00428C;
+    box-shadow: 0 0 0 2px rgba(0, 66, 140, 0.1);
+}
+
+.email-input::placeholder {
+    color: #9CA3AF;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px 24px;
+    background: #00428C;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+    background: #003366;
+}
+
+.submit-button:disabled {
+    background: #9CA3AF;
+    cursor: not-allowed;
+}
+
+.message {
+    margin-top: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.success-message {
+    color: #059669;
+}
+
+.error-message {
+    color: #DC2626;
+}
+
+.waitlist-headers p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 10px 0;
+    text-align: center;
+    letter-spacing: -0.0088em;
+    color: #FFFFFF;
+    width: 100%;
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    .waitlist-main {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    .waitlist-headers p {
+        font-size: 22px;
+        line-height: 28px;
+        margin: 10px 0 10px 10px;
+        text-align: left;
+    }
+
+    .waitlist-wrapper {
+        flex: 0 0 42%;
+        max-width: 42%;
+    }
+
+    .waitlist-headers {
+        text-align: left;
+        align-items: flex-start;
+        margin: 0;
+    }
+
+    .waitlist-title {
+        font-size: 20px;
+        line-height: 24px;
+        text-align: left;
+        margin-left: 10px;
+    }
+
+    .waitlist-form {
+        flex-direction: row;
+        gap: 12px;
+        margin: 30px 0 30px 10px;
+    }
+
+    .submit-button {
+        width: auto;
+        min-width: 120px;
+    }
+}

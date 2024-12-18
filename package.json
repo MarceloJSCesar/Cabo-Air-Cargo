@@ -12,6 +12,7 @@
     "axios": "^1.7.7",
     "cors": "^2.8.5",
     "feather-icons-react": "^0.7.0",
+    "firebase": "^11.1.0",
     "framer-motion": "^11.11.9",
     "helmet": "^8.0.0",
     "leaflet": "^1.9.4",

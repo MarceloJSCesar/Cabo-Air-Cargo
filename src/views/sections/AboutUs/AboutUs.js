@@ -53,7 +53,7 @@ export default function AboutUs() {
                 <div className="aboutus-main">
                     <div className="aboutus-wrapper">
                         <div className="aboutus-headers">
-                            <h1 className="aboutus-title">{isLoading ? title : aboutUsContent.title}</h1>
+                            <h1 className="aboutus-title">{isLoading ? title : aboutUsContent.title ?? title}</h1>
                         </div>
 
                         <div className="aboutus-content">
@@ -61,14 +61,14 @@ export default function AboutUs() {
                                 {/* Cape Verde Businesses will now be able to keep high quality products in inventory by utilizing our super fast air cargo services. */}
                                 {/* Additionally, our ultra competitive pricing will give every Cape Verdean access to e-Commerce products from United States, Europe, Africa, and South America. 
                                 Your items will arrive in Cape Verde on our weekly scheduled flights and will be ready for pick up in just 10 days or less. */}
-                                {isLoading ? `${paragraph1} ${paragraph2}` : aboutUsContent.description}
+                                {isLoading ? `${paragraph1} ${paragraph2}` : aboutUsContent.description ?? `${paragraph1} ${paragraph2}`}
                             </p>
                         </div>
                     </div>
 
                     <div className="aboutus-container">
                         <ManualVideoPlayer 
-                            videoSrc={isLoading ? aboutVideo : aboutUsContent.videoUrl} 
+                            videoSrc={isLoading ? aboutVideo : aboutUsContent.videoUrl ?? aboutVideo} 
                         />
 
                     </div>

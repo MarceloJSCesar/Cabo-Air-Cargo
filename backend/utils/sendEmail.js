@@ -4,13 +4,13 @@ export const sendEmail = (email, subject, text) => {
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.NEW_MAIL_USERNAME,
-      pass: process.env.NEW_MAIL_PASSWORD,
+      user: process.env.MAIL_USERNAME,
+      pass: process.env.MAIL_PASSWORD,
     },
   });
 
   let mailOptions = {
-    from: 'Cabo Air Cargo <' + process.env.NEW_MAIL_USERNAME + '>',
+    from: `Cabo Air Cargo Team`,
     to: email,
     subject: `${subject} | Cabo Air Cargo`,
     text: text,
